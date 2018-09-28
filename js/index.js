@@ -6,14 +6,15 @@ $(document).ready(function() {
 
     // on the "body", listen for keyboard events 
     $('body').on('keydown', function(evt) {
-        // once a key goes down, mark it as fired and don't
-        // accept any more events until the key goes up
         if (!fired) {
-            fired = true;
             // Enter key is 13, so if enter is hit and you 
             // are on a button, find whatever has focus and pass that 
             // text (lower case) to the process function
             if (evt.keyCode == 13) {
+                // once a key goes down, mark it as fired and don't
+                // accept any more events until the key goes up
+                fired = true;
+
                 // hack to get the screen reader to re-read
                 // the number you are on for repeats
                 $(evt.target).blur().focus();
@@ -26,6 +27,8 @@ $(document).ready(function() {
             // on the special "backToStart" and then swich focus
             // to the first tabindex instead of URL bar
             if (evt.keyCode == 9) {
+                fired = true;
+
                 if ($(':focus').hasClass('backToStart')) {
                     evt.preventDefault();
                     $('.btn[tabindex=1]').focus();
@@ -34,6 +37,7 @@ $(document).ready(function() {
         } else {
             return false;
         }
+
     });
 
     // A key has gone up, so now accept events again
