@@ -1,39 +1,45 @@
-body{
-  /* background and font color */ 
-  background: black;
-  color: white;
-
-  /* font and font size - feel free to adjust */ 
-  font-family:sans-serif;
-  font-size: 30px;
-
-  /* center on the page */
-  display:flex;
-  justify-content:center;
-  align-items: center;
-  height: 100vh;
+body {
+    /* background and font color */
+    background: black;
+    color: white;
+    /* font and font size - feel free to adjust */
+    font-family: sans-serif;
+    font-size: 30px;
+    /* center on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.btn{
-  /* the look of the buttons */ 
-  display:inline-block;
-  margin: 2px;
-  padding: 5px 15px;
-  border: 1px solid white;
-  border-radius: 2px;
-  cursor: pointer;
+.btn {
+    /* the look of the buttons */
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 15px;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
 }
-.btn:focus{
-  /* invert the button that has focus */
-  background:white;
-  color: black;
+
+.btn:focus {
+    /* invert the button that has focus */
+    background: white;
+    color: black;
 }
-#ans{
-  /* the "answer" box gets special love */
-  display:block;
-  border-bottom: 1px solid #ffffff;
-  margin: 20px 0
+
+.flex {
+    display: flex;
 }
-#ans:before{
-  content:"Answer: "
+
+.flex div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#problem,
+#ans {
+    border-bottom: 1px solid #ffffff;
+    flex-grow: 8;
+    margin-left: 10px;
 }

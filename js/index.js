@@ -37,7 +37,6 @@ $(document).ready(function() {
         } else {
             return false;
         }
-
     });
 
     // A key has gone up, so now accept events again
@@ -50,6 +49,13 @@ $(document).ready(function() {
     $('.btn').on('click', function(evt) {
         process($(this).text().toLowerCase());
     });
+
+    // This is another convenience if you "click" on the 
+    // "Answer" text to calculate the answer
+    $('.answerText').on('click', function(evt) {
+        process("=");
+    });
+
 });
 
 // Since keyboard and mouse events call the same
@@ -57,6 +63,13 @@ $(document).ready(function() {
 // Text is passed in and depending on what it is, 
 // different things happen.
 function process(text) {
+
+    // This is a reference to the problem text line
+    var problemTextArea = $('#problem');
+
+    // This is a reference to the current text on the line
+    var problemText = $('#problem').html();
+
     // This is a reference to the answer text line
     var answerTextArea = $('#ans');
 
@@ -70,16 +83,19 @@ function process(text) {
     switch (text) {
         // if it is the word plus, add a plus sign 
         case "plus":
-            answerTextArea.text(answerText + "+");
+            // the area label here helps chrome vox speak the problem correctly
+            problemTextArea.html(problemText + " <span aria-label='plus'> + </span> ");
             break;
 
             // if it is the word minus, add a minus sign
         case "minus":
-            answerTextArea.text(answerText + "-");
+            // the area label here helps chrome vox speak the problem correctly
+            problemTextArea.html(problemText + " <span aria-label='minus'> - </span> ");
             break;
 
             // if it is the word reset, clear the answer line
         case "reset":
+            problemTextArea.text("");
             answerTextArea.text("");
             break;
 
@@ -87,9 +103,26 @@ function process(text) {
             // answer line, and then focus on it so it is read
             // give it some nice formatting too so it is read
             // appropriately and not per digit
+            // NOTE: = is currently hidden now given the new answer btn
         case "=":
             try {
-                answerTextArea.text(eval(answerText).toLocaleString());
+                answerTextArea.text(eval(problemText).toLocaleString());
+                $('#problem').focus();
+            } catch (e) {
+                // adding an error message if the 
+                // eval didn't go as planned
+                answerTextArea.text('Error');
+                $('#ans').focus();
+            }
+            break;
+
+            // slightly different outcome for clicking answer.
+            // this can be refactored if you are feeling saucy 
+        case "answer:":
+            try {
+                // tweak here to just pull text from the problem and ignore
+                // html (the span tags)
+                answerTextArea.text(eval(problemTextArea.text()).toLocaleString());
                 $('#ans').focus();
             } catch (e) {
                 // adding an error message if the 
@@ -102,7 +135,7 @@ function process(text) {
             // otherwise, you're probably on a number, so just
             // append it to the existing text
         default:
-            answerTextArea.text(answerText + text);
+            problemTextArea.html(problemText + text);
             break;
     }
 }

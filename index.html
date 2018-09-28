@@ -1,47 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Switch Calculator</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+    <meta charset="UTF-8">
+    <title>Switch Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-  <div class="calculator">
-  <div class="btn" tabindex="1">0</div>
-  <div class="btn" tabindex="2">1</div>
-  <div class="btn" tabindex="3">2</div>
-  <div class="btn" tabindex="4">3</div>
-  <div class="btn" tabindex="5">4</div>
-  <div class="btn" tabindex="6">5</div>
-  <div class="btn" tabindex="7">6</div>
-  <div class="btn" tabindex="8">7</div>
-  <div class="btn" tabindex="9">8</div>
-  <div class="btn" tabindex="10">9</div>
-  <div class="btn" tabindex="11">plus</div>
-  <div class="btn" tabindex="12">minus</div>
-  <div class="btn" tabindex="13">=</div>
-  <div class="ans" id="ans" tabindex="14"></div>
-  <div id="reset" class="btn" tabindex="15">Reset</div>
-  <!-- below is a little hack to get focus to go to 0 instead of going to URL bar --> 
-  <div tabindex="16" class='backToStart'></div>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+    <div class="calculator">
+        <div class="btn" tabindex="1">0</div>
+        <div class="btn" tabindex="2">1</div>
+        <div class="btn" tabindex="3">2</div>
+        <div class="btn" tabindex="4">3</div>
+        <div class="btn" tabindex="5">4</div>
+        <div class="btn" tabindex="6">5</div>
+        <div class="btn" tabindex="7">6</div>
+        <div class="btn" tabindex="8">7</div>
+        <div class="btn" tabindex="9">8</div>
+        <div class="btn" tabindex="10">9</div>
+        <div class="btn" tabindex="11">plus</div>
+        <div class="btn" tabindex="12">minus</div>
+        <!-- hiding this for now -->
+        <!-- <div class="btn" tabindex="13">=</div>-->
+        <div class='flex'>
+            <div tabindex="14">Problem:</div>
+            <div class="problem" id="problem" tabindex="15"></div>
+        </div>
+        <div class='flex'>
+            <div tabindex="16" class='btn'>Answer:</div>
+            <div class="ans" id="ans" tabindex="17"></div>
+        </div>
+        <div id="reset" class="btn" tabindex="18">Reset</div>
+        <!-- below is a little hack to get focus to go to 0 instead of going to URL bar -->
+        <div tabindex="19" class='backToStart'></div>
+    </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
