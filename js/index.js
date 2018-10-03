@@ -118,11 +118,13 @@ function process(text) {
 
             // slightly different outcome for clicking answer.
             // this can be refactored if you are feeling saucy 
-        case "answer:":
+        case " = ":
             try {
                 // tweak here to just pull text from the problem and ignore
                 // html (the span tags)
-                answerTextArea.text(eval(problemTextArea.text()).toLocaleString());
+                // JM trying to get it to read equation, =, answer (e.g. 5 + 4 = 9)
+                problemTextArea.text() + answerTextArea.text(eval(problemTextArea.text()).toLocaleString()); 
+                //"=" + answerTextArea.text(problemTextArea.text().toLocaleString());
                 $('#ans').focus();
             } catch (e) {
                 // adding an error message if the 
