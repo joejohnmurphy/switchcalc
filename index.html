@@ -24,11 +24,13 @@
         <!-- hiding this for now -->
         <!-- <div class="btn" tabindex="13">=</div>-->
         <div class='flex'>
-            <div tabindex="14">Problem:</div>
+            <!-- JM set tabindex to -1 so these show on screen but are skipped for screen reading -->
+            <div tabindex="-1">Equation:</div>
             <div class="problem" id="problem" tabindex="15"></div>
         </div>
         <div class='flex'>
-            <div tabindex="16" class='btn'>Answer:</div>
+            <!-- JM added spaces to differentiate "=" and " = ", but there's likely a better fix to display and say "=" instead of "answer" -->
+            <div tabindex="16" class='btn'> = </div>
             <div class="ans" id="ans" tabindex="17"></div>
         </div>
         <div id="reset" class="btn" tabindex="18">Reset</div>
