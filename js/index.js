@@ -92,6 +92,12 @@ function process(text) {
             // the area label here helps chrome vox speak the problem correctly
             problemTextArea.html(problemText + " <span aria-label='minus'> - </span> ");
             break;
+            
+            // if it is the word times, add a times sign
+        case "times":
+            // the area label here helps chrome vox speak the problem correctly
+            problemTextArea.html(problemText + " <span aria-label='times'> * </span> ");
+            break;
 
             // if it is the word reset, clear the answer line
         case "reset":
