@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,34 +9,35 @@
 
 <body>
     <div class="calculator">
-        <div class="btn" tabindex="1">0</div>
-        <div class="btn" tabindex="2">1</div>
-        <div class="btn" tabindex="3">2</div>
-        <div class="btn" tabindex="4">3</div>
-        <div class="btn" tabindex="5">4</div>
-        <div class="btn" tabindex="6">5</div>
-        <div class="btn" tabindex="7">6</div>
-        <div class="btn" tabindex="8">7</div>
-        <div class="btn" tabindex="9">8</div>
-        <div class="btn" tabindex="10">9</div>
-        <div class="btn" tabindex="11">plus</div>
-        <div class="btn" tabindex="12">minus</div>
-        <div class="btn" tabindex="13">times</div>
+        <div class="btn zero" tabindex="1">0</div>
+        <div class="btn one" tabindex="2">1</div>
+        <div class="btn two" tabindex="3">2</div>
+        <div class="btn three" tabindex="4">3</div>
+        <div class="btn four" tabindex="5">4</div>
+        <div class="btn five" tabindex="6">5</div>
+        <div class="btn six" tabindex="7">6</div>
+        <div class="btn seven" tabindex="8">7</div>
+        <div class="btn eight" tabindex="9">8</div>
+        <div class="btn nine" tabindex="10">9</div>
+        <div class="btn operation ten" tabindex="11">plus</div>
+        <div class="btn operation eleven" tabindex="12">minus</div>
+        <div class="btn operation twelve" tabindex="13">times</div>
+        <div class="btn operation thirteen" tabindex="14">divided by</div>
         <!-- hiding this for now -->
         <!-- <div class="btn" tabindex="13">=</div>-->
         <div class='flex'>
             <!-- JM set tabindex to -1 so these show on screen but are skipped for screen reading -->
             <div tabindex="-1">Equation:</div>
-            <div class="problem" id="problem" tabindex="15"></div>
+            <div class="problem fourteen" id="problem" tabindex="15"></div>
         </div>
         <div class='flex'>
             <!-- JM added spaces to differentiate "=" and " = ", but there's likely a better fix to display and say "=" instead of "answer" -->
-            <div tabindex="16" class='btn'> = </div>
-            <div class="ans" id="ans" tabindex="17"></div>
+            <div class="btn fifteen" tabindex="16"> = </div>
+            <div class="ans sixteen" id="ans" tabindex="17"></div>
         </div>
-        <div id="reset" class="btn" tabindex="18">Reset</div>
+        <div class="btn seventeen" id="reset" tabindex="18">Reset</div>
         <!-- below is a little hack to get focus to go to 0 instead of going to URL bar -->
-        <div tabindex="19" class='backToStart'></div>
+        <div class="backToStart eighteen" tabindex="19"></div>
     </div>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
