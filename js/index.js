@@ -1,4 +1,4 @@
-// global var to prevent key repeasts
+// global var to prevent key repeats
 var fired = false;
 
 // JQuery - this applies the code once the document is loaded
@@ -19,8 +19,16 @@ $(document).ready(function() {
                 // the number you are on for repeats
                 $(evt.target).blur().focus();
 
+
                 // call the function
                 process($('.btn:focus').text().toLowerCase());
+                // Create a new jQuery.Event object with specified event properties.
+
+                // JM - return focus to beginning if an operation is selected    
+                if ($(':focus').hasClass('operation')) {
+                    evt.preventDefault();
+                    $('.backToStart[tabindex=19]').focus();
+                }
             }
 
             // Tab is is 9, so if we are tabbing, see if we are 
@@ -34,6 +42,89 @@ $(document).ready(function() {
                     $('.btn[tabindex=1]').focus();
                 }
             }
+
+             // Go back using Backspace - see if this can be made into a loop
+            if (evt.keyCode == 8) {
+                fired = true;
+                    evt.preventDefault();
+
+                if ($(':focus').hasClass('zero')) {
+                    $('.backToStart').focus();
+                }
+
+                if ($(':focus').hasClass('one')) {
+                    $('.btn[tabindex=1]').focus();
+                }
+
+                if ($(':focus').hasClass('two')) {
+                    $('.btn[tabindex=2]').focus();
+                }
+
+                if ($(':focus').hasClass('three')) {
+                    $('.btn[tabindex=3]').focus();
+                }
+
+                if ($(':focus').hasClass('four')) {
+                    $('.btn[tabindex=4]').focus();
+                }
+
+                if ($(':focus').hasClass('five')) {
+                    $('.btn[tabindex=5]').focus();
+                }
+
+                if ($(':focus').hasClass('six')) {
+                    $('.btn[tabindex=6]').focus();
+                }
+
+                if ($(':focus').hasClass('seven')) {
+                    $('.btn[tabindex=7]').focus();
+                }
+
+                if ($(':focus').hasClass('eight')) {
+                    $('.btn[tabindex=8]').focus();
+                }
+
+                if ($(':focus').hasClass('nine')) {
+                    $('.btn[tabindex=9]').focus();
+                }
+
+                if ($(':focus').hasClass('ten')) {
+                    $('.btn[tabindex=10]').focus();
+                }
+
+                if ($(':focus').hasClass('eleven')) {
+                    $('.btn[tabindex=11]').focus();
+                }
+
+                if ($(':focus').hasClass('twelve')) {
+                    $('.btn[tabindex=12]').focus();
+                }
+
+                if ($(':focus').hasClass('thirteen')) {
+                    $('.btn[tabindex=13]').focus();
+                }
+
+                if ($(':focus').hasClass('fourteen')) {
+                    $('.btn[tabindex=14]').focus();
+                }
+
+                if ($(':focus').hasClass('fifteen')) {
+                    $('.problem').focus();
+                }
+
+                if ($(':focus').hasClass('sixteen')) {
+                    $('.btn[tabindex=16]').focus();
+                }
+
+                if ($(':focus').hasClass('seventeen')) {
+                    $('.ans').focus();
+                }
+
+                if ($(':focus').hasClass('eighteen')) {
+                    $('.btn[tabindex=18]').focus();
+                }
+            }
+
         } else {
             return false;
         }
@@ -97,6 +188,12 @@ function process(text) {
         case "times":
             // the area label here helps chrome vox speak the problem correctly
             problemTextArea.html(problemText + " <span aria-label='times'> * </span> ");
+            break;
+
+            // if it is the word divided by, add a division sign
+        case "divided by":
+            // the area label here helps chrome vox speak the problem correctly
+            problemTextArea.html(problemText + " <span aria-label='divided by'> / </span> ");
             break;
 
             // if it is the word reset, clear the answer line
