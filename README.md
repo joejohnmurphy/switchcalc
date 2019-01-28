@@ -1,2 +1,2 @@
 # switchcalc
-switch access calculator for the web
+web-based switch access calculator and communicator
