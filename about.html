@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<body>
+    <div class="info" tabindex="1">
+        <img src="images/info.jpg" alt="You are on about me">
+    </div>
+    <div class="btn a name" tabindex="1">My name</div>
+    <div class="btn b age" tabindex="1">My age</div>
+    <div class="btn c tv" tabindex="1">My favorite TV show</div>
+    <div class="btn d food" tabindex="1">My favorite food</div>
+    <div class="btn e sport" tabindex="1">My favorite sport</div>
+    <div class="btn f team" tabindex="1">My favorite team</div>
+    <div class="btn g music" tabindex="1">My favorite music</div>
+    <a href="javascript:location.replace('home.html')" class="btn up" tabindex="0">
+        <img src="images/up.jpg" alt="Go back to the last page">
+    </a>
+
+    <audio id="name" controls style="display:none"><source src="sounds/name.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="age" controls style="display:none"><source src="sounds/age.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="tv" controls style="display:none"><source src="sounds/tv.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="food" controls style="display:none"><source src="sounds/food.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="sport" controls style="display:none"><source src="sounds/sport.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="team" controls style="display:none"><source src="sounds/team.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="music" controls style="display:none"><source src="sounds/music.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+        
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>

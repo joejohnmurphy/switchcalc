@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>I Want</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<body>
+    <div class="info" tabindex="1">
+        <img src="images/info.jpg" alt="You are on Break">
+    </div>
+    <div class="btn a rest" tabindex="1">I want to rest</div>
+    <div class="btn b walk" tabindex="1">I want to take a walk</div>
+    <div class="btn c switch" tabindex="1">I want my head switch off</div>
+
+    <a href="javascript:location.replace('want.html')" class="btn up" tabindex="0">
+        <img src="images/up.jpg" alt="Go back to the last page">
+    </a>
+
+    <audio id="rest" controls style="display:none"><source src="sounds/rest.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="walk" controls style="display:none"><source src="sounds/walk.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="switch" controls style="display:none"><source src="sounds/switch.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+ 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>

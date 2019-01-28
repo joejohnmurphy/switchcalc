@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Social</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<body>
+    <div class="info" tabindex="1">
+        <img src="images/info.jpg" alt="You are on social">
+    </div>
+    <div class="btn a hello" tabindex="1">Hello</div>
+    <div class="btn b goodbye" tabindex="1">Goodbye</div>
+    <a href="javascript:location.replace('questions.html')" class="btn c" tabindex="1">Go to Questions</a>
+    <a href="javascript:location.replace('comments.html')" class="btn d" tabindex="1">Go to Comments</a>
+    <a href="javascript:location.replace('feelings.html')" class="btn e" tabindex="1">Go to Feelings</a>
+    <div class="btn f daily" tabindex="1">Daily share</div>
+    <div class="btn g weekend" tabindex="1">Weekend share</div>
+    <div class="btn h school" tabindex="1">What I did at school</div>
+
+    <a href="javascript:location.replace('home.html')" class="btn up" tabindex="0">
+        <img src="images/up.jpg" alt="Go back to the last page">
+    </a>
+
+    <audio id="hello" controls style="display:none"><source src="sounds/hello.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="goodbye" controls style="display:none"><source src="sounds/goodbye.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="daily" controls style="display:none"><source src="sounds/daily.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="weekend" controls style="display:none"><source src="sounds/weekend.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="school" controls style="display:none"><source src="sounds/school.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>

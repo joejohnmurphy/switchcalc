@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Switch Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calc.css">
 </head>
 
 <body>
@@ -28,7 +28,8 @@
         <div class='flex'>
             <!-- JM set tabindex to -1 so these show on screen but are skipped for screen reading -->
             <div tabindex="-1">Equation:</div>
-            <div class="problem fourteen" id="problem" tabindex="15"></div>
+            <div class="readProblem fourteen" id="readProblem" tabindex="15"></div>
+            <div class="problem" id="problem" tabindex="-1"></div>
         </div>
         <div class='flex'>
             <!-- JM added spaces to differentiate "=" and " = ", but there's likely a better fix to display and say "=" instead of "answer" -->
@@ -36,12 +37,29 @@
             <div class="ans sixteen" id="ans" tabindex="17"></div>
         </div>
         <div class="btn seventeen" id="reset" tabindex="18">Reset</div>
-        <!-- below is a little hack to get focus to go to 0 instead of going to URL bar -->
-        <div class="backToStart eighteen" tabindex="19"></div>
+        <a href="javascript:location.replace('home.html')" class="btn up" tabindex="0">
+            <img src="images/up.jpg" alt="Go back to the last page">
+        </a>
     </div>
     </div>
+
+<audio id="a_0" controls style="display:none"><source src="sounds/0.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_1" controls style="display:none"><source src="sounds/1.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_2" controls style="display:none"><source src="sounds/2.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_3" controls style="display:none"><source src="sounds/3.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_4" controls style="display:none"><source src="sounds/4.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_5" controls style="display:none"><source src="sounds/5.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_6" controls style="display:none"><source src="sounds/6.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_7" controls style="display:none"><source src="sounds/7.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_8" controls style="display:none"><source src="sounds/8.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_9" controls style="display:none"><source src="sounds/9.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_plus" controls style="display:none"><source src="sounds/plus.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_minus" controls style="display:none"><source src="sounds/minus.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_times" controls style="display:none"><source src="sounds/times.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<audio id="a_divided" controls style="display:none"><source src="sounds/divided.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src="js/index.js"></script>
+    <script src="js/calc.js"></script>
 </body>
 
 </html>

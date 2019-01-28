@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Social</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<body>
+    <div class="info" tabindex="1">
+        <img src="images/info.jpg" alt="You are on Feelings">
+    </div>
+    <div class="btn a happy" tabindex="1">I'm happy</div>
+    <div class="btn b sad" tabindex="1">I'm sad</div>
+    <div class="btn c excited" tabindex="1">I'm excited</div>
+    <div class="btn d tired" tabindex="1">I'm tired</div>
+    <div class="btn e sick" tabindex="1">I feel sick</div>
+ 
+    <a href="javascript:location.replace('social.html')" class="btn up" tabindex="0">
+        <img src="images/up.jpg" alt="Go back to the last page">
+    </a>
+
+    <audio id="happy" controls style="display:none"><source src="sounds/happy.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="sad" controls style="display:none"><source src="sounds/sad.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="excited" controls style="display:none"><source src="sounds/excited.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="tired" controls style="display:none"><source src="sounds/tired.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="sick" controls style="display:none"><source src="sounds/sick.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+ 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>
