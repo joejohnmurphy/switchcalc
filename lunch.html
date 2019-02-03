@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lunch and Dinner</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<body>
+    <div class="info" tabindex="1">
+        <img src="images/info.jpg" alt="You are on Lunch and Dinner">
+    </div>
+    <div class='btn a hamburger' tabindex='1'>hamburger</div>
+    <div class='btn b chicken' tabindex='1'>chicken</div>
+    <div class='btn c chips' tabindex='1'>chips</div>
+    <div class='btn d french_fries' tabindex='1'>french fries</div>
+    <div class='btn e pasta' tabindex='1'>pasta</div>
+    <div class='btn f bread' tabindex='1'>bread</div>
+    <div class='btn g salad' tabindex='1'>salad</div>
+    <div class='btn h sandwich' tabindex='1'>sandwich</div>
+ 
+    <a href="javascript:location.replace('food.html')" class="btn up" tabindex="0">
+        <img src="images/up.jpg" alt="Go back to the last page">
+    </a>
+
+    <audio id='hamburger' controls style='display:none'><source src='sounds/hamburger.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+    <audio id='chicken' controls style='display:none'><source src='sounds/chicken.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+    <audio id='chips' controls style='display:none'><source src='sounds/chips.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+    <audio id='french_fries' controls style='display:none'><source src='sounds/french_fries.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+    <audio id='pasta' controls style='display:none'><source src='sounds/pasta.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+    <audio id='bread' controls style='display:none'><source src='sounds/bread.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+    <audio id='salad' controls style='display:none'><source src='sounds/salad.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+    <audio id='sandwich' controls style='display:none'><source src='sounds/sandwich.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+ 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>
