@@ -101,82 +101,104 @@ $(document).ready(function() {
              // Go back using Backspace - see if this can be made into a loop
             if (evt.keyCode == 8) {
                 fired = true;
-                    evt.preventDefault();
-
-                if ($(':focus').hasClass('zero')) {
-                    $('.up').focus();
-                }
-
-                if ($(':focus').hasClass('one')) {
-                    $('.btn[tabindex=1]').focus();
-                }
-
-                if ($(':focus').hasClass('two')) {
-                    $('.btn[tabindex=2]').focus();
-                }
-
-                if ($(':focus').hasClass('three')) {
-                    $('.btn[tabindex=3]').focus();
-                }
-
-                if ($(':focus').hasClass('four')) {
-                    $('.btn[tabindex=4]').focus();
-                }
-
-                if ($(':focus').hasClass('five')) {
-                    $('.btn[tabindex=5]').focus();
-                }
-
-                if ($(':focus').hasClass('six')) {
-                    $('.btn[tabindex=6]').focus();
-                }
-
-                if ($(':focus').hasClass('seven')) {
-                    $('.btn[tabindex=7]').focus();
-                }
-
-                if ($(':focus').hasClass('eight')) {
-                    $('.btn[tabindex=8]').focus();
-                }
-
-                if ($(':focus').hasClass('nine')) {
-                    $('.btn[tabindex=9]').focus();
-                }
-
-                if ($(':focus').hasClass('ten')) {
-                    $('.btn[tabindex=10]').focus();
-                }
-
-                if ($(':focus').hasClass('eleven')) {
-                    $('.btn[tabindex=11]').focus();
-                }
-
-                if ($(':focus').hasClass('twelve')) {
-                    $('.btn[tabindex=12]').focus();
-                }
-
-                if ($(':focus').hasClass('thirteen')) {
-                    $('.btn[tabindex=13]').focus();
-                }
-
-                if ($(':focus').hasClass('fourteen')) {
-                    $('.btn[tabindex=14]').focus();
-                }
-
-                if ($(':focus').hasClass('fifteen')) {
-                    $('.problem').focus();
-                }
-
-                if ($(':focus').hasClass('sixteen')) {
-                    $('.btn[tabindex=16]').focus();
-                }
-
-                if ($(':focus').hasClass('seventeen')) {
-                    $('.ans').focus();
-                }
-
-                if ($(':focus').hasClass('up')) {
-                    $('.btn[tabindex=18]').focus();
+                evt.preventDefault();
+                
+                //get current tabindex and find out if its usable to get the previous item
+                var currentEle = $(':focus');
+                var currentIndex = $(currentEle).attr('tabindex');
+                if(typeof(currentIndex) == 'string') {
+                    //console.log('currentIndex: '+currentIndex);
+                    currentIndex = parseInt(currentIndex);
+                    //if we have an integer tabindex above 1 get the previous item
+                    if(currentIndex > 1) {
+                        nextIndex = currentIndex - 1;
+                        //console.log('nextIndex: '+nextIndex);
+                        $('[tabindex='+nextIndex+']').focus();
+                    } else {
+                        //fallback to classes to get previous item
+                        if ($(':focus').hasClass('up')) {
+                            $('.btn[tabindex=18]').focus();
+                        } else {
+                            $('.up').focus();
+                        }
+                    }
+                } else {
+                    //if not a usable tabindex then use the classes to get previous item
+                    if ($(':focus').hasClass('zero')) {
+                        $('.up').focus();
+                    }
+    
+                    if ($(':focus').hasClass('one')) {
+                        $('.btn[tabindex=1]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('two')) {
+                        $('.btn[tabindex=2]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('three')) {
+                        $('.btn[tabindex=3]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('four')) {
+                        $('.btn[tabindex=4]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('five')) {
+                        $('.btn[tabindex=5]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('six')) {
+                        $('.btn[tabindex=6]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('seven')) {
+                        $('.btn[tabindex=7]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('eight')) {
+                        $('.btn[tabindex=8]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('nine')) {
+                        $('.btn[tabindex=9]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('ten')) {
+                        $('.btn[tabindex=10]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('eleven')) {
+                        $('.btn[tabindex=11]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('twelve')) {
+                        $('.btn[tabindex=12]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('thirteen')) {
+                        $('.btn[tabindex=13]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('fourteen')) {
+                        $('.btn[tabindex=14]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('fifteen')) {
+                        $('.problem').focus();
+                    }
+    
+                    if ($(':focus').hasClass('sixteen')) {
+                        $('.btn[tabindex=16]').focus();
+                    }
+    
+                    if ($(':focus').hasClass('seventeen')) {
+                        $('.ans').focus();
+                    }
+    
+                    if ($(':focus').hasClass('up')) {
+                        $('.btn[tabindex=18]').focus();
+                    }
                 }
 
             }
