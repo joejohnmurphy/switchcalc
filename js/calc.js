@@ -19,6 +19,7 @@ $(document).ready(function() {
                 // the number you are on for repeats
                 //$(evt.target).blur().focus();
                 
+                //use data-sound attribute to identify mp3 element to play
                 var soundId = $('.btn:focus').data('sound');
                 if(typeof(soundId) == 'string') {
                     document.getElementById(soundId).play();
@@ -62,13 +63,19 @@ $(document).ready(function() {
                     nextIndex = currentIndex - 1;
                     //console.log('nextIndex: '+nextIndex);
                     $('[tabindex='+nextIndex+']').focus();
+                } else if(currentIndex == 1) {
+                    $('[tabindex="0"]').focus();
                 } else {
-                    //fallback to classes to get previous item
-                    if ($(':focus').hasClass('up')) {
-                        $('.btn[tabindex=18]').focus();
-                    } else {
-                        $('.up').focus();
-                    }
+                    //find the highest tabindex and go to it
+                    var tabIndexElements = $('[tabindex]');
+                    var highestIndex = 0;
+                    $.each(tabIndexElements,function(index,element){
+                        var thisIndex = parseInt($(element).attr('tabindex'));
+                        if(thisIndex > highestIndex) {
+                            highestIndex = thisIndex;
+                        }
+                    });
+                    $('[tabindex='+highestIndex+']').focus();
                 }   
 
             }
