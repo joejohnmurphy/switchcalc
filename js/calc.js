@@ -3,6 +3,7 @@ var fired = false;
 
 // JQuery - this applies the code once the document is loaded
 $(document).ready(function() {
+    $('[tabindex=1]').focus();
 
     // on the "body", listen for keyboard events 
     $('body').on('keydown', function(evt) {
