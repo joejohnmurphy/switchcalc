@@ -278,66 +278,31 @@ $('.info').focus();
              // Go back using Backspace - see if this can be made into a loop
             if (evt.keyCode == 8) {
                 fired = true;
-                    evt.preventDefault();
+                evt.preventDefault();
                 
-                if ($(':focus').hasClass('b')) {
-                    $('.a').focus();
-                }
-
-                if ($(':focus').hasClass('c')) {
-                    $('.b').focus();
-                }
-
-                if ($(':focus').hasClass('d')) {
-                    $('.c').focus();
-                }
-
-                if ($(':focus').hasClass('e')) {
-                    $('.d').focus();
-                }
-
-                if ($(':focus').hasClass('f')) {
-                    $('.e').focus();
-                }
-
-                if ($(':focus').hasClass('g')) {
-                    $('.f').focus();
-                }
-
-                if ($(':focus').hasClass('h')) {
-                    $('.g').focus();
-                }
-
-                if ($(':focus').hasClass('i')) {
-                    $('.h').focus();
-                }
-
-                if ($(':focus').hasClass('j')) {
-                    $('.i').focus();
-                }
-
-                if ($(':focus').hasClass('k')) {
-                    $('.j').focus();
-                }
-
-                if ($(':focus').hasClass('l')) {
-                    $('.k').focus();
-                }
-
-                if ($(':focus').hasClass('m')) {
-                    $('.l').focus();
-                }
-
-                if ($(':focus').hasClass('n')) {
-                    $('.m').focus();
-                }
-
-                if ($(':focus').hasClass('o')) {
-                    $('.n').focus();
-                }
-
-                if ($(':focus').hasClass('up')) {
-                    $('.btn[tabindex=1]').focus();
+                //get current tabindex and find out if its usable to get the previous item
+                var currentEle = $(':focus');
+                var currentIndex = $(currentEle).attr('tabindex');
+                //console.log('currentIndex: '+currentIndex);
+                currentIndex = parseInt(currentIndex);
+                //if we have an integer tabindex above 1 get the previous item
+                if(currentIndex > 1) {
+                    nextIndex = currentIndex - 1;
+                    //console.log('nextIndex: '+nextIndex);
+                    $('[tabindex='+nextIndex+']').focus();
+                } else if(currentIndex == 1) {
+                    $('[tabindex="0"]').focus();
+                } else {
+                    //find the highest tabindex and go to it
+                    var tabIndexElements = $('[tabindex]');
+                    var highestIndex = 0;
+                    $.each(tabIndexElements,function(index,element){
+                        var thisIndex = parseInt($(element).attr('tabindex'));
+                        if(thisIndex > highestIndex) {
+                            highestIndex = thisIndex;
+                        }
+                    });
+                    $('[tabindex='+highestIndex+']').focus();
                 }
             }
 
