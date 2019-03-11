@@ -21,15 +21,8 @@ $('.info').focus();
 
                 //use data-sound attribute to identify mp3 element to play
                 var soundId = $(':focus').data('sound');
-<<<<<<< HEAD
                 if(typeof(soundId) == 'string') {
                     document.getElementById(soundId).play();
-=======
-                if($(evt.target).not('a').length > 0) {
-                    evt.preventDefault();
-                    focusedItem = $(':focus');
-                    $(evt.target).blur();
->>>>>>> 8f90916d4da7708bbf0275ae7dcaaf91a5d4efd6
                 }
                 
             }
