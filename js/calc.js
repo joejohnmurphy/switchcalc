@@ -88,6 +88,7 @@ $(document).ready(function() {
 
     // A key has gone up, so now accept events again
     $('body').on('keyup', function(evt) {
+        console.log(evt.keyCode);
         fired = false;
     });
 
