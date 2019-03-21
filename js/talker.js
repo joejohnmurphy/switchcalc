@@ -22,7 +22,15 @@ $('.info').focus();
                 //use data-sound attribute to identify mp3 element to play
                 var soundId = $(':focus').data('sound');
                 if(typeof(soundId) == 'string') {
-                    document.getElementById(soundId).play();
+                    var playEle = document.getElementById(soundId);
+
+                    //pause and reset any other audio currently playing
+                    $('audio').each(function(i,e) {
+                        e.pause();
+                        e.currentTime = 0;
+                    });
+
+                    playEle.play();
                 }
                 
             }
