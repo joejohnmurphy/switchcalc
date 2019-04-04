@@ -4,6 +4,8 @@ var fired = false;
 // JQuery - this applies the code once the document is loaded
 $(document).ready(function() {
 
+    $('[tabindex=1]').focus();
+
     // on the "body", listen for keyboard events 
     $('body').on('keydown', function(evt) {
         if (!fired) {
@@ -18,61 +20,11 @@ $(document).ready(function() {
                 // hack to get the screen reader to re-read
                 // the number you are on for repeats
                 //$(evt.target).blur().focus();
-
-                if ($(':focus').hasClass('zero')) {
-                    document.getElementById('a_0').play()
-                }
-
-                if ($(':focus').hasClass('one')) {
-                    document.getElementById('a_1').play()
-                }
-
-                if ($(':focus').hasClass('two')) {
-                    document.getElementById('a_2').play()
-                }
-
-                if ($(':focus').hasClass('three')) {
-                    document.getElementById('a_3').play()
-                }
-
-                if ($(':focus').hasClass('four')) {
-                    document.getElementById('a_4').play()
-                }
-
-                if ($(':focus').hasClass('five')) {
-                    document.getElementById('a_5').play()
-                }
-
-                if ($(':focus').hasClass('six')) {
-                    document.getElementById('a_6').play()
-                }
-
-                if ($(':focus').hasClass('seven')) {
-                    document.getElementById('a_7').play()
-                }
-
-                if ($(':focus').hasClass('eight')) {
-                    document.getElementById('a_8').play()
-                }
-
-                if ($(':focus').hasClass('nine')) {
-                    document.getElementById('a_9').play()
-                }
-
-                if ($(':focus').hasClass('ten')) {
-                    document.getElementById('a_plus').play()
-                }
-
-                if ($(':focus').hasClass('eleven')) {
-                    document.getElementById('a_minus').play()
-                }
-
-                if ($(':focus').hasClass('twelve')) {
-                    document.getElementById('a_times').play()
-                }
-
-                if ($(':focus').hasClass('thirteen')) {
-                    document.getElementById('a_divided').play()
+                
+                //use data-sound attribute to identify mp3 element to play
+                var soundId = $('.btn:focus').data('sound');
+                if(typeof(soundId) == 'string') {
+                    document.getElementById(soundId).play();
                 }
 
                 // call the function
@@ -101,94 +53,45 @@ $(document).ready(function() {
              // Go back using Backspace - see if this can be made into a loop
             if (evt.keyCode == 8) {
                 fired = true;
-                    evt.preventDefault();
-
-                if ($(':focus').hasClass('zero')) {
-                    $('.up').focus();
-                }
-
-                if ($(':focus').hasClass('one')) {
-                    $('.btn[tabindex=1]').focus();
-                }
-
-                if ($(':focus').hasClass('two')) {
-                    $('.btn[tabindex=2]').focus();
-                }
-
-                if ($(':focus').hasClass('three')) {
-                    $('.btn[tabindex=3]').focus();
-                }
-
-                if ($(':focus').hasClass('four')) {
-                    $('.btn[tabindex=4]').focus();
-                }
-
-                if ($(':focus').hasClass('five')) {
-                    $('.btn[tabindex=5]').focus();
-                }
-
-                if ($(':focus').hasClass('six')) {
-                    $('.btn[tabindex=6]').focus();
-                }
-
-                if ($(':focus').hasClass('seven')) {
-                    $('.btn[tabindex=7]').focus();
-                }
-
-                if ($(':focus').hasClass('eight')) {
-                    $('.btn[tabindex=8]').focus();
-                }
-
-                if ($(':focus').hasClass('nine')) {
-                    $('.btn[tabindex=9]').focus();
-                }
-
-                if ($(':focus').hasClass('ten')) {
-                    $('.btn[tabindex=10]').focus();
-                }
-
-                if ($(':focus').hasClass('eleven')) {
-                    $('.btn[tabindex=11]').focus();
-                }
-
-                if ($(':focus').hasClass('twelve')) {
-                    $('.btn[tabindex=12]').focus();
-                }
-
-                if ($(':focus').hasClass('thirteen')) {
-                    $('.btn[tabindex=13]').focus();
-                }
-
-                if ($(':focus').hasClass('fourteen')) {
-                    $('.btn[tabindex=14]').focus();
-                }
-
-                if ($(':focus').hasClass('fifteen')) {
-                    $('.problem').focus();
-                }
-
-                if ($(':focus').hasClass('sixteen')) {
-                    $('.btn[tabindex=16]').focus();
-                }
-
-                if ($(':focus').hasClass('seventeen')) {
-                    $('.ans').focus();
-                }
-
-                if ($(':focus').hasClass('up')) {
-                    $('.btn[tabindex=18]').focus();
-                }
+                evt.preventDefault();
+                
+                //get current tabindex and find out if its usable to get the previous item
+                var currentEle = $(':focus');
+                var currentIndex = $(currentEle).attr('tabindex');
+                //console.log('currentIndex: '+currentIndex);
+                currentIndex = parseInt(currentIndex);
+                //if we have an integer tabindex above 1 get the previous item
+                if(currentIndex > 1) {
+                    nextIndex = currentIndex - 1;
+                    //console.log('nextIndex: '+nextIndex);
+                    $('[tabindex='+nextIndex+']').focus();
+                } else if(currentIndex == 1) {
+                    $('[tabindex="0"]').focus();
+                } else {
+                    //find the highest tabindex and go to it
+                    var tabIndexElements = $('[tabindex]');
+                    var highestIndex = 0;
+                    $.each(tabIndexElements,function(index,element){
+                        var thisIndex = parseInt($(element).attr('tabindex'));
+                        if(thisIndex > highestIndex) {
+                            highestIndex = thisIndex;
+                        }
+                    });
+                    $('[tabindex='+highestIndex+']').focus();
+                }   
 
             }
 
         } else {
             return false;
         }
+
+
     });
 
     // A key has gone up, so now accept events again
     $('body').on('keyup', function(evt) {
-        fired = false;
+        setTimeout( function(){ fired = false; },500);
     });
 
     // This is just a convenience method that lets
