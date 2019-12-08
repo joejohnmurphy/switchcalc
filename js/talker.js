@@ -1,4 +1,3 @@
-
 // global var to prevent key repeats
 var fired = false;
 var focusedItem = null;
@@ -275,6 +274,46 @@ $('.info').focus();
                     if ($(':focus').hasClass('Asian')) {document.getElementById('Asian').play()}
                     if ($(':focus').hasClass('American')) {document.getElementById('American').play()}
                     if ($(':focus').hasClass('seafood')) {document.getElementById('seafood').play()}
+                    if ($(':focus').hasClass('abby')) {document.getElementById('abby').play()}
+                    if ($(':focus').hasClass('adam')) {document.getElementById('adam').play()}
+                    if ($(':focus').hasClass('grace')) {document.getElementById('grace').play()}
+                    if ($(':focus').hasClass('ibet')) {document.getElementById('ibet').play()}
+                    if ($(':focus').hasClass('john')) {document.getElementById('john').play()}
+                    if ($(':focus').hasClass('kendrick')) {document.getElementById('kendrick').play()}
+                    if ($(':focus').hasClass('sam')) {document.getElementById('sam').play()}
+                    if ($(':focus').hasClass('tj')) {document.getElementById('tj').play()}
+                    if ($(':focus').hasClass('trevor')) {document.getElementById('trevor').play()}
+                    if ($(':focus').hasClass('mcclellan')) {document.getElementById('mcclellan').play()}
+                    if ($(':focus').hasClass('pressley')) {document.getElementById('pressley').play()}
+                    if ($(':focus').hasClass('maley')) {document.getElementById('maley').play()}
+                    if ($(':focus').hasClass('springstroh')) {document.getElementById('springstroh').play()}
+                    if ($(':focus').hasClass('rodriguez')) {document.getElementById('rodriguez').play()}
+                    if ($(':focus').hasClass('craig')) {document.getElementById('craig').play()}
+                    if ($(':focus').hasClass('lawler')) {document.getElementById('lawler').play()}
+                    if ($(':focus').hasClass('fleming')) {document.getElementById('fleming').play()}
+                    if ($(':focus').hasClass('schallmoser')) {document.getElementById('schallmoser').play()}
+                    if ($(':focus').hasClass('mr_e')) {document.getElementById('mr_e').play()}
+                    if ($(':focus').hasClass('biz')) {document.getElementById('biz').play()}
+                    if ($(':focus').hasClass('gannon')) {document.getElementById('gannon').play()}
+                    if ($(':focus').hasClass('math')) {document.getElementById('math').play()}
+                    if ($(':focus').hasClass('cwt')) {document.getElementById('cwt').play()}
+                    if ($(':focus').hasClass('health')) {document.getElementById('health').play()}
+                    if ($(':focus').hasClass('zones')) {document.getElementById('zones').play()}
+                    if ($(':focus').hasClass('lunch')) {document.getElementById('lunch').play()}
+                    if ($(':focus').hasClass('resource')) {document.getElementById('resource').play()}
+                    if ($(':focus').hasClass('pe')) {document.getElementById('pe').play()}
+                    if ($(':focus').hasClass('cooking')) {document.getElementById('cooking').play()}
+                    if ($(':focus').hasClass('english')) {document.getElementById('english').play()}
+                    if ($(':focus').hasClass('choir')) {document.getElementById('choir').play()}
+                    if ($(':focus').hasClass('red')) {document.getElementById('red').play()}
+                    if ($(':focus').hasClass('yellow')) {document.getElementById('yellow').play()}
+                    if ($(':focus').hasClass('green')) {document.getElementById('green').play()}
+                    if ($(':focus').hasClass('blue')) {document.getElementById('blue').play()}
+                    if ($(':focus').hasClass('purple')) {document.getElementById('purple').play()}
+                    if ($(':focus').hasClass('black')) {document.getElementById('black').play()}
+                    if ($(':focus').hasClass('white')) {document.getElementById('white').play()}
+                    if ($(':focus').hasClass('brown')) {document.getElementById('brown').play()}
+
                 }
                 
             }

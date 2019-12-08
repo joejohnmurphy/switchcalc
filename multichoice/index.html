@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multichoice Test</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form>
+        Enter Question 1: <input type="text">
+        <input type="submit" value="">
+    </form> 
+    <div>
+        <div id="q1" class="btn" tabindex="1">Question 1.</div>
+        <div class="btn" tabindex="2">Pitch</div>
+        <div class="btn" tabindex="3">Cillia</div>
+        <div class="btn" tabindex="4">Fuzz</div>
+        <br>
+        <div class='flex'>
+            <div tabindex="5">The selected answer is:</div>
+            <div class="problem" id="problem" tabindex="5"></div>
+        </div>
+        <div id="reset" class="btn" tabindex="6">Reset</div>
+        <a href="question2.html" tabindex="7">Next question</div>
+        <!-- below is a little hack to get focus to go to 0 instead of going to URL bar -->
+        <div tabindex="19" class='backToStart'></div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

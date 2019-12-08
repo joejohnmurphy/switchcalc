@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multichoice Test</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="btn" tabindex="1">Question 4. What tool or object is needed to amplify sound?</div>
+        <div class="btn" tabindex="2">Magnet</div>
+        <div class="btn" tabindex="3">Screwdriver</div>
+        <div class="btn" tabindex="4">Buzzsaw</div>
+        <br>
+        <div class='flex'>
+            <div tabindex="5">The selected answer is:</div>
+            <div class="problem" id="problem" tabindex="5"></div>
+        </div>
+        <div id="reset" class="btn" tabindex="6">Reset</div>
+        <a href="question5.html" tabindex="7">Next question</div>
+        <!-- below is a little hack to get focus to go to 0 instead of going to URL bar -->
+        <div tabindex="19" class='backToStart'></div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,16 +1,16 @@
+
 body {
-    /* background and font color */
     background: black;
     color: white;
-    /* font and font size - feel free to adjust */
     font-family: sans-serif;
     font-size: 30px;
-    /* center on the page */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+}
+
+.inputs{
+    float:left;
+    width:50%;
+    overflow:hidden;
+    margin-bottom: 50px;
 }
 
 .btn {
@@ -38,7 +38,30 @@ body {
     margin-bottom: 10px;
 }
 
-.info, .up{
-    font-size: 0;
-    color: black;
+.problem,
+#ans {
+    border-bottom: 1px solid #ffffff;
+    flex-grow: 8;
+    margin-left: 10px;
+}
+
+.backToStart{
+    margin-bottom: 100px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.choiceInput, .questionInput{
+    margin: 15px 0px 15px 0px;
+}
+
+#start{
+    background-color: #2f9e38;
+    margin: 0px 0px 20px 0px;
+}
+
+#end{
+    background-color: #b7222c;
 }
