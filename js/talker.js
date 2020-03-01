@@ -313,7 +313,23 @@ $('.info').focus();
                     if ($(':focus').hasClass('black')) {document.getElementById('black').play()}
                     if ($(':focus').hasClass('white')) {document.getElementById('white').play()}
                     if ($(':focus').hasClass('brown')) {document.getElementById('brown').play()}
-
+                    if ($(':focus').hasClass('sister')) {document.getElementById('sister').play()}
+                    if ($(':focus').hasClass('help')) {document.getElementById('help').play()}
+                    if ($(':focus').hasClass('switch_off')) {document.getElementById('switch_off').play()}
+                    if ($(':focus').hasClass('cant_hear')) {document.getElementById('cant_hear').play()}
+                    if ($(':focus').hasClass('chair_move')) {document.getElementById('chair_move').play()}
+                    if ($(':focus').hasClass('chair_tilt')) {document.getElementById('chair_tilt').play()}
+                    if ($(':focus').hasClass('head')) {document.getElementById('head').play()}
+                    if ($(':focus').hasClass('neck')) {document.getElementById('neck').play()}
+                    if ($(':focus').hasClass('hip')) {document.getElementById('hip').play()}
+                    if ($(':focus').hasClass('arm')) {document.getElementById('arm').play()}
+                    if ($(':focus').hasClass('leg')) {document.getElementById('leg').play()}
+                    if ($(':focus').hasClass('feet')) {document.getElementById('feet').play()}
+                    if ($(':focus').hasClass('weezer')) {document.getElementById('weezer').play()}
+                    if ($(':focus').hasClass('dekker')) {document.getElementById('dekker').play()}
+                    if ($(':focus').hasClass('springsteen')) {document.getElementById('springsteen').play()}
+                    if ($(':focus').hasClass('ghostbusters')) {document.getElementById('ghostbusters').play()}
+                    if ($(':focus').hasClass('beatles')) {document.getElementById('beatles').play()}
                 }
                 
             }
