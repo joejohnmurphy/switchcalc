@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Something's Not Right</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<body>
+    <div class="info" tabindex="1">
+        <img src="images/info.jpg" alt="You are on colors">
+    </div>
+    <div class="btn a head" tabindex="2">head</div>
+    <div class="btn b neck" tabindex="3">neck</div>
+    <div class="btn c hip" tabindex="4">hip</div>
+    <div class="btn d arm" tabindex="5">arm</div>
+    <div class="btn e leg" tabindex="6">leg</div>
+    <div class="btn f feet" tabindex="7">feet</div>
+    <a href="javascript:location.replace('need.html')" class="btn up" tabindex="0">
+        <img src="images/up.jpg" alt="Go back to the last page">
+    </a>
+
+    <audio id="head" controls style="display:none"><source src="sounds/head.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="neck" controls style="display:none"><source src="sounds/neck.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="hip" controls style="display:none"><source src="sounds/hip.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="arm" controls style="display:none"><source src="sounds/arm.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="leg" controls style="display:none"><source src="sounds/leg.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="feet" controls style="display:none"><source src="sounds/feet.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>

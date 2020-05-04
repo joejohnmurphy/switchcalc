@@ -330,6 +330,13 @@ $('.info').focus();
                     if ($(':focus').hasClass('springsteen')) {document.getElementById('springsteen').play()}
                     if ($(':focus').hasClass('ghostbusters')) {document.getElementById('ghostbusters').play()}
                     if ($(':focus').hasClass('beatles')) {document.getElementById('beatles').play()}
+                    if ($(':focus').hasClass('mom')) {document.getElementById('mom').play()}
+                    if ($(':focus').hasClass('dad')) {document.getElementById('dad').play()}
+                    if ($(':focus').hasClass('tessa')) {document.getElementById('tessa').play()}
+                    if ($(':focus').hasClass('goofma')) {document.getElementById('goofma').play()}
+                    if ($(':focus').hasClass('grandpa')) {document.getElementById('grandpa').play()}
+                    if ($(':focus').hasClass('grandma')) {document.getElementById('grandma').play()}
+                    if ($(':focus').hasClass('joking')) {document.getElementById('joking').play()}
                 }
                 
             }
