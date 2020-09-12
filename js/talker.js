@@ -353,7 +353,16 @@ $('.info').focus();
                     if ($(':focus').hasClass('zoey')) {document.getElementById('zoey').play()}
                     if ($(':focus').hasClass('layla')) {document.getElementById('layla').play()}
                     if ($(':focus').hasClass('cassens')) {document.getElementById('cassens').play()}
-                }
+                    if ($(':focus').hasClass('global_studies')) {document.getElementById('global_studies').play()}
+                    if ($(':focus').hasClass('digital_tools')) {document.getElementById('digital_tools').play()}
+                    if ($(':focus').hasClass('ingredients')) {document.getElementById('ingredients').play()}
+                    if ($(':focus').hasClass('take_out_bread')) {document.getElementById('take_out_bread').play()}
+                    if ($(':focus').hasClass('scoop_peanut_butter')) {document.getElementById('scoop_peanut_butter').play()}
+                    if ($(':focus').hasClass('scoop_jelly')) {document.getElementById('scoop_jelly').play()}
+                    if ($(':focus').hasClass('put_bread_together')) {document.getElementById('put_bread_together').play()}
+                    if ($(':focus').hasClass('cut_sandwich')) {document.getElementById('cut_sandwich').play()}
+                    if ($(':focus').hasClass('enjoy')) {document.getElementById('enjoy').play()}
+          }
                 
             }
 

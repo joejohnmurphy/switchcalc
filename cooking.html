@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<body>
+    <div class="info" tabindex="1">
+        <img src="images/info.jpg" alt="You are on cooking">
+    </div>
+    <div class="btn a ingredients" tabindex="2">Get ingredients</div>
+    <div class="btn a take_out_bread" tabindex="2">Take out bread</div>
+    <div class="btn a scoop_peanut_butter" tabindex="2">Scoop peanut butter</div>
+    <div class="btn a scoop_jelly" tabindex="2">Scoop jelly</div>
+    <div class="btn a put_bread_together" tabindex="2">Put bread together</div>
+    <div class="btn a cut_sandwich" tabindex="2">Cut the sandwich</div>
+    <div class="btn a enjoy" tabindex="2">Enjoy!</div>
+
+    <a href="javascript:location.replace('schedule.html')" class="btn up" tabindex="0">
+        <img src="images/up.jpg" alt="Go back to the last page">
+    </a>
+
+    <audio id="ingredients" controls style="display:none"><source src="sounds/ingredients.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="take_out_bread" controls style="display:none"><source src="sounds/take_out_bread.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="scoop_peanut_butter" controls style="display:none"><source src="sounds/scoop_peanut_butter.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="scoop_jelly" controls style="display:none"><source src="sounds/scoop_jelly.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="put_bread_together" controls style="display:none"><source src="sounds/put_bread_together.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="cut_sandwich" controls style="display:none"><source src="sounds/cut_sandwich.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="enjoy" controls style="display:none"><source src="sounds/enjoy.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>
