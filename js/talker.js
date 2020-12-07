@@ -281,7 +281,8 @@ $('.info').focus();
                     if ($(':focus').hasClass('Asian')) {document.getElementById('Asian').play()}
                     if ($(':focus').hasClass('American')) {document.getElementById('American').play()}
                     if ($(':focus').hasClass('seafood')) {document.getElementById('seafood').play()}
-                    if ($(':focus').hasClass('abby')) {document.getElementById('abby').play(); window.location.href="home.html"}
+                    if ($(':focus').hasClass('abby')) {document.getElementById('abby').play(); 
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
                     if ($(':focus').hasClass('adam')) {document.getElementById('adam').play()}
                     if ($(':focus').hasClass('grace')) {document.getElementById('grace').play()}
                     if ($(':focus').hasClass('ibet')) {document.getElementById('ibet').play()}
