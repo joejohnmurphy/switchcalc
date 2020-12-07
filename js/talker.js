@@ -2,6 +2,13 @@
 var fired = false;
 var focusedItem = null;
 
+   var whisper = function() {
+                    if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 0.1; document.getElementById("green").playbackRate = 2; document.getElementById('green').play()}
+                    if ($(':focus').hasClass('blue')) {document.getElementById('blue').volume = 0.1; document.getElementById('blue').play()}
+                        
+                };
+
+
 // JQuery - this applies the code once the document is loaded
 $(document).ready(function() {
 
@@ -307,7 +314,7 @@ $('.info').focus();
                     if ($(':focus').hasClass('choir')) {document.getElementById('choir').play()}
                     if ($(':focus').hasClass('red')) {document.getElementById('red').play()}
                     if ($(':focus').hasClass('yellow')) {document.getElementById('yellow').play()}
-                    if ($(':focus').hasClass('green')) {document.getElementById('green').play()}
+                    if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 1; document.getElementById("green").playbackRate = 1; document.getElementById('green').play()}
                     if ($(':focus').hasClass('blue')) {document.getElementById('blue').play()}
                     if ($(':focus').hasClass('purple')) {document.getElementById('purple').play()}
                     if ($(':focus').hasClass('black')) {document.getElementById('black').play()}
@@ -355,15 +362,37 @@ $('.info').focus();
                     if ($(':focus').hasClass('cassens')) {document.getElementById('cassens').play()}
                     if ($(':focus').hasClass('global_studies')) {document.getElementById('global_studies').play()}
                     if ($(':focus').hasClass('digital_tools')) {document.getElementById('digital_tools').play()}
-                    if ($(':focus').hasClass('ingredients')) {document.getElementById('ingredients').play()}
-                    if ($(':focus').hasClass('take_out_bread')) {document.getElementById('take_out_bread').play()}
-                    if ($(':focus').hasClass('scoop_peanut_butter')) {document.getElementById('scoop_peanut_butter').play()}
-                    if ($(':focus').hasClass('scoop_jelly')) {document.getElementById('scoop_jelly').play()}
-                    if ($(':focus').hasClass('put_bread_together')) {document.getElementById('put_bread_together').play()}
-                    if ($(':focus').hasClass('cut_sandwich')) {document.getElementById('cut_sandwich').play()}
+                    if ($(':focus').hasClass('step_1')) {document.getElementById('step_1').play()}
+                    if ($(':focus').hasClass('step_2')) {document.getElementById('step_2').play()}
+                    if ($(':focus').hasClass('step_3')) {document.getElementById('step_3').play()}
+                    if ($(':focus').hasClass('step_4')) {document.getElementById('step_4').play()}
+                    if ($(':focus').hasClass('step_5')) {document.getElementById('step_5').play()}
+                    if ($(':focus').hasClass('step_6')) {document.getElementById('step_6').play()}
+                    if ($(':focus').hasClass('step_7')) {document.getElementById('step_7').play()}
                     if ($(':focus').hasClass('enjoy')) {document.getElementById('enjoy').play()}
+                    if ($(':focus').hasClass('confused')) {document.getElementById('confused').play()}
+                    if ($(':focus').hasClass('bored')) {document.getElementById('bored').play()}
+                    if ($(':focus').hasClass('nervous')) {document.getElementById('nervous').play()}
+                    if ($(':focus').hasClass('mad')) {document.getElementById('mad').play()}
+                    if ($(':focus').hasClass('scared')) {document.getElementById('scared').play()}
+                    if ($(':focus').hasClass('focused')) {document.getElementById('focused').play()}
+                    if ($(':focus').hasClass('day')) {document.getElementById('day').play()}
+                    if ($(':focus').hasClass('night')) {document.getElementById('night').play()}
+                    if ($(':focus').hasClass('morning')) {document.getElementById('morning').play()}
+                    if ($(':focus').hasClass('afternoon')) {document.getElementById('afternoon').play()}
+                    if ($(':focus').hasClass('aqueduct')) {document.getElementById('aqueduct').play()}
+                    if ($(':focus').hasClass('mosaic')) {document.getElementById('mosaic').play()}
+                    if ($(':focus').hasClass('ancient')) {document.getElementById('ancient').play()}
+                    if ($(':focus').hasClass('old')) {document.getElementById('old').play()}
+                    if ($(':focus').hasClass('new')) {document.getElementById('new').play()}
+                    if ($(':focus').hasClass('meteor_shower')) {document.getElementById('meteor_shower').play()}
+                    if ($(':focus').hasClass('happy_birthday')) {document.getElementById('happy_birthday').play()}
+                    if ($(':focus').hasClass('panda')) {document.getElementById('panda').play()}
+                    if ($(':focus').hasClass('telescope')) {document.getElementById('telescope').play()}
+                    if ($(':focus').hasClass('jam_board')) {document.getElementById('jam_board').play()}
+                    if ($(':focus').hasClass('google_slides')) {document.getElementById('google_slides').play()}
+                    if ($(':focus').hasClass('crackerjack')) {document.getElementById('crackerjack').play()}
           }
-                
             }
 
             // Tab is is 9, so if we are tabbing, see if we are 
@@ -426,4 +455,5 @@ $('.info').focus();
 
     setTimeout( function(){ fired = false; },500);
     });
+
 });
