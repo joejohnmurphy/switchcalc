@@ -4,7 +4,7 @@ if ($sent)
     {   
     ?>
 <script type="text/javascript">
-window.location = "http://www.switchcalc.com/home.html";
+window.location = "home.html";
 </script>      
     <?php
     }
