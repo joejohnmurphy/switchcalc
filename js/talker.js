@@ -5,6 +5,7 @@ var focusedItem = null;
    var whisper = function() {
                     if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 0.1; document.getElementById("green").playbackRate = 2; document.getElementById('green').play()}
                     if ($(':focus').hasClass('blue')) {document.getElementById('blue').volume = 0.1; document.getElementById('blue').play()}
+                    if ($(':focus').hasClass('school')) {document.getElementById('school_w').volume = 0.1; document.getElementById('school_w').play()}
                         
                 };
 
@@ -110,8 +111,8 @@ $('.info').focus();
                         document.getElementById('goodbye').play()
                     }
     
-                    if ($(':focus').hasClass('school')) {
-                        document.getElementById('school').play()
+                    if ($(':focus').hasClass('school')) {document.getElementById('school').play();
+                        setTimeout(function() {window.location.href="school.html"}, 2000);}
                     }
     
                     if ($(':focus').hasClass('how_doing')) {
@@ -283,26 +284,46 @@ $('.info').focus();
                     if ($(':focus').hasClass('seafood')) {document.getElementById('seafood').play()}
                     if ($(':focus').hasClass('abby')) {document.getElementById('abby').play(); 
                         setTimeout(function() {window.location.href="home.html"}, 2000);}
-                    if ($(':focus').hasClass('adam')) {document.getElementById('adam').play()}
-                    if ($(':focus').hasClass('grace')) {document.getElementById('grace').play()}
-                    if ($(':focus').hasClass('ibet')) {document.getElementById('ibet').play()}
-                    if ($(':focus').hasClass('john')) {document.getElementById('john').play()}
-                    if ($(':focus').hasClass('kendrick')) {document.getElementById('kendrick').play()}
-                    if ($(':focus').hasClass('sam')) {document.getElementById('sam').play()}
-                    if ($(':focus').hasClass('tj')) {document.getElementById('tj').play()}
-                    if ($(':focus').hasClass('trevor')) {document.getElementById('trevor').play()}
-                    if ($(':focus').hasClass('mcclellan')) {document.getElementById('mcclellan').play()}
-                    if ($(':focus').hasClass('pressley')) {document.getElementById('pressley').play()}
-                    if ($(':focus').hasClass('maley')) {document.getElementById('maley').play()}
-                    if ($(':focus').hasClass('springstroh')) {document.getElementById('springstroh').play()}
-                    if ($(':focus').hasClass('rodriguez')) {document.getElementById('rodriguez').play()}
-                    if ($(':focus').hasClass('craig')) {document.getElementById('craig').play()}
-                    if ($(':focus').hasClass('lawler')) {document.getElementById('lawler').play()}
-                    if ($(':focus').hasClass('fleming')) {document.getElementById('fleming').play()}
-                    if ($(':focus').hasClass('schallmoser')) {document.getElementById('schallmoser').play()}
-                    if ($(':focus').hasClass('mr_e')) {document.getElementById('mr_e').play()}
-                    if ($(':focus').hasClass('biz')) {document.getElementById('biz').play()}
-                    if ($(':focus').hasClass('gannon')) {document.getElementById('gannon').play()}
+                    if ($(':focus').hasClass('adam')) {document.getElementById('adam').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('grace')) {document.getElementById('grace').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('ibet')) {document.getElementById('ibet').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('john')) {document.getElementById('john').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('kendrick')) {document.getElementById('kendrick').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('sam')) {document.getElementById('sam').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('tj')) {document.getElementById('tj').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('trevor')) {document.getElementById('trevor').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('mcclellan')) {document.getElementById('mcclellan').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('pressley')) {document.getElementById('pressley').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('maley')) {document.getElementById('maley').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('springstroh')) {document.getElementById('springstroh').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('rodriguez')) {document.getElementById('rodriguez').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('craig')) {document.getElementById('craig').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('lawler')) {document.getElementById('lawler').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('fleming')) {document.getElementById('fleming').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('schallmoser')) {document.getElementById('schallmoser').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('mr_e')) {document.getElementById('mr_e').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('biz')) {document.getElementById('biz').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                    if ($(':focus').hasClass('gannon')) {document.getElementById('gannon').play();
+                        setTimeout(function() {window.location.href="home.html"}, 2000);}
                     if ($(':focus').hasClass('math')) {document.getElementById('math').play()}
                     if ($(':focus').hasClass('cwt')) {document.getElementById('cwt').play()}
                     if ($(':focus').hasClass('health')) {document.getElementById('health').play()}
