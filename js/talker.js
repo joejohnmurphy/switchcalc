@@ -3,12 +3,20 @@ var fired = false;
 var focusedItem = null;
 
    var whisper = function() {
-                    if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 0.1; document.getElementById("green").playbackRate = 2; document.getElementById('green').play()}
+                    if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 0.1; document.getElementById('green').play()}
                     if ($(':focus').hasClass('blue')) {document.getElementById('blue').volume = 0.1; document.getElementById('blue').play()}
-                    if ($(':focus').hasClass('school')) {document.getElementById('school_w').volume = 0.1; document.getElementById('school_w').play()}
+                    if ($(':focus').hasClass('school_page')) {document.getElementById('school_w').volume = 0.1; document.getElementById('school_w').play()}
+                    if ($(':focus').hasClass('calculator_page')) {document.getElementById('calculator_w').volume = 0.1; document.getElementById('calculator_w').play()}
+                    if ($(':focus').hasClass('social_page')) {document.getElementById('social_w').volume = 0.1; document.getElementById('social_w').play()}
+                    if ($(':focus').hasClass('feelings_page')) {document.getElementById('feelings_w').volume = 0.1; document.getElementById('feelings_w').play()}
+                    if ($(':focus').hasClass('want_page')) {document.getElementById('want_w').volume = 0.1; document.getElementById('want_w').play()}
+                    if ($(':focus').hasClass('need_page')) {document.getElementById('need_w').volume = 0.1; document.getElementById('need_w').play()}
+                    if ($(':focus').hasClass('about_page')) {document.getElementById('about_w').volume = 0.1; document.getElementById('about_w').play()}
+                    if ($(':focus').hasClass('family_page')) {document.getElementById('family_w').volume = 0.1; document.getElementById('family_w').play()}
+                    if ($(':focus').hasClass('food_page')) {document.getElementById('food_w').volume = 0.1; document.getElementById('food_w').play()}
+                    if ($(':focus').hasClass('up')) {document.getElementById('up_w').volume = 0.1; document.getElementById('up_w').play()}
                         
                 };
-
 
 // JQuery - this applies the code once the document is loaded
 $(document).ready(function() {
@@ -111,8 +119,8 @@ $('.info').focus();
                         document.getElementById('goodbye').play()
                     }
     
-                    if ($(':focus').hasClass('school')) {document.getElementById('school').play();
-                        setTimeout(function() {window.location.href="school.html"}, 2000);}
+                    if ($(':focus').hasClass('school')) {
+                        document.getElementById('school').play()
                     }
     
                     if ($(':focus').hasClass('how_doing')) {
@@ -283,47 +291,47 @@ $('.info').focus();
                     if ($(':focus').hasClass('American')) {document.getElementById('American').play()}
                     if ($(':focus').hasClass('seafood')) {document.getElementById('seafood').play()}
                     if ($(':focus').hasClass('abby')) {document.getElementById('abby').play(); 
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('adam')) {document.getElementById('adam').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('grace')) {document.getElementById('grace').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('ibet')) {document.getElementById('ibet').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('john')) {document.getElementById('john').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('kendrick')) {document.getElementById('kendrick').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000);}
                     if ($(':focus').hasClass('sam')) {document.getElementById('sam').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('tj')) {document.getElementById('tj').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('trevor')) {document.getElementById('trevor').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('mcclellan')) {document.getElementById('mcclellan').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('pressley')) {document.getElementById('pressley').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('maley')) {document.getElementById('maley').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('springstroh')) {document.getElementById('springstroh').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('rodriguez')) {document.getElementById('rodriguez').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('craig')) {document.getElementById('craig').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('lawler')) {document.getElementById('lawler').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('fleming')) {document.getElementById('fleming').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('schallmoser')) {document.getElementById('schallmoser').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('mr_e')) {document.getElementById('mr_e').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000);}
                     if ($(':focus').hasClass('biz')) {document.getElementById('biz').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('gannon')) {document.getElementById('gannon').play();
-                        setTimeout(function() {window.location.href="home.html"}, 2000);}
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
                     if ($(':focus').hasClass('math')) {document.getElementById('math').play()}
                     if ($(':focus').hasClass('cwt')) {document.getElementById('cwt').play()}
                     if ($(':focus').hasClass('health')) {document.getElementById('health').play()}
@@ -414,7 +422,38 @@ $('.info').focus();
                     if ($(':focus').hasClass('jam_board')) {document.getElementById('jam_board').play()}
                     if ($(':focus').hasClass('google_slides')) {document.getElementById('google_slides').play()}
                     if ($(':focus').hasClass('crackerjack')) {document.getElementById('crackerjack').play()}
+                    if ($(':focus').hasClass('school_page')) {document.getElementById('school_page').volume = 0.1;
+                        document.getElementById('school_page').play(); 
+                        setTimeout(function() {window.location.href="school.html";}, 2000)}
+                    if ($(':focus').hasClass('calculator_page')) {document.getElementById('calculator_page').volume = 0.1;
+                        document.getElementById('calculator_page').play(); 
+                        setTimeout(function() {window.location.href="index.html";}, 2000)}
+                    if ($(':focus').hasClass('social_page')) {document.getElementById('social_page').volume = 0.1;
+                        document.getElementById('social_page').play(); 
+                        setTimeout(function() {window.location.href="social.html";}, 2000)}
+                    if ($(':focus').hasClass('feelings_page')) {document.getElementById('feelings_page').volume = 0.1;
+                        document.getElementById('feelings_page').play(); 
+                        setTimeout(function() {window.location.href="feelings.html";}, 2000)}
+                    if ($(':focus').hasClass('want_page')) {document.getElementById('want_page').volume = 0.1;
+                        document.getElementById('want_page').play(); 
+                        setTimeout(function() {window.location.href="want.html";}, 2000)}
+                    if ($(':focus').hasClass('need_page')) {document.getElementById('need_page').volume = 0.1;
+                        document.getElementById('need_page').play(); 
+                        setTimeout(function() {window.location.href="need.html";}, 2000)}
+                    if ($(':focus').hasClass('about_page')) {document.getElementById('about_page').volume = 0.1;
+                        document.getElementById('about_page').play(); 
+                        setTimeout(function() {window.location.href="about.html";}, 2000)}
+                    if ($(':focus').hasClass('family_page')) {document.getElementById('family_page').volume = 0.1;
+                        document.getElementById('family_page').play(); 
+                        setTimeout(function() {window.location.href="family.html";}, 2000)}
+                    if ($(':focus').hasClass('food_page')) {document.getElementById('food_page').volume = 0.1;
+                        document.getElementById('food_page').play(); 
+                        setTimeout(function() {window.location.href="food.html";}, 2000)}
+                    if ($(':focus').hasClass('home_page')) {document.getElementById('home_page').volume = 0.1;
+                        document.getElementById('home_page').play(); 
+                        setTimeout(function() {window.location.href="home.html";}, 2000)}
           }
+                
             }
 
             // Tab is is 9, so if we are tabbing, see if we are 
@@ -477,5 +516,4 @@ $('.info').focus();
 
     setTimeout( function(){ fired = false; },500);
     });
-
 });
