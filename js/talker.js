@@ -2,7 +2,13 @@
 var fired = false;
 var focusedItem = null;
 
-   var whisper = function() {
+var whisper = function(class_name, whisper_sound) {
+    if ($(':focus').hasClass(class_name)) {
+        document.getElementById(whisper_sound).volume = 0.1;
+        document.getElementById(whisper_sound).play()}
+};
+
+/*
     if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 0.1; document.getElementById('green').play()}
     if ($(':focus').hasClass('blue')) {document.getElementById('blue').volume = 0.1; document.getElementById('blue').play()}
     if ($(':focus').hasClass('school_page')) {document.getElementById('school_w').volume = 0.1; document.getElementById('school_w').play()}
@@ -20,8 +26,6 @@ var focusedItem = null;
     if ($(':focus').hasClass('teachers_page')) {document.getElementById('teachers_w').volume = 0.1; document.getElementById('teachers_w').play()}
     if ($(':focus').hasClass('schedule_page')) {document.getElementById('schedule_w').volume = 0.1; document.getElementById('schedule_w').play()}
     if ($(':focus').hasClass('colors_page')) {document.getElementById('colors_w').volume = 0.1; document.getElementById('colors_w').play()}
-    if ($(':focus').hasClass('day')) {document.getElementById('day_w').volume = 0.1; document.getElementById('day_w').play()}
-    if ($(':focus').hasClass('night')) {document.getElementById('night_w').volume = 0.1; document.getElementById('night_w').play()}
     if ($(':focus').hasClass('morning')) {document.getElementById('morning_w').volume = 0.1; document.getElementById('morning_w').play()}
     if ($(':focus').hasClass('afternoon')) {document.getElementById('afternoon_w').volume = 0.1; document.getElementById('afternoon_w').play()}
     if ($(':focus').hasClass('aqueduct')) {document.getElementById('aqueduct_w').volume = 0.1; document.getElementById('aqueduct_w').play()}
@@ -36,6 +40,7 @@ var focusedItem = null;
     if ($(':focus').hasClass('jam_board')) {document.getElementById('jam_board_w').volume = 0.1; document.getElementById('jam_board_w').play()}
     if ($(':focus').hasClass('google_slides')) {document.getElementById('google_slides_w').volume = 0.1; document.getElementById('google_slides_w').play()}
         };
+*/
 
 // JQuery - this applies the code once the document is loaded
 $(document).ready(function() {
@@ -49,23 +54,29 @@ $('.info').focus();
             // are on a button, find whatever has focus and pass that 
             // text (lower case) to the process function
             if (evt.keyCode == 13) {
-                // once a key goes down, mark it as fired and don't
+                    // once a key goes down, mark it as fired and don't
                 // accept any more events until the key goes up
                 fired = true;
 
-                
                 //use data-sound attribute to identify mp3 element to play
                 var soundId = $(':focus').data('sound');
-                if(typeof(soundId) == 'string') {
-                    document.getElementById(soundId).play();
+//                if(typeof(soundId) == 'string') {
 
-                    //pause and reset any other audio currently playing
+                    if ($(':focus').hasClass('page')) {
+                        document.getElementById(soundId).volume = 0.1;
+                        document.getElementById(soundId).play();
+                        setTimeout(function() {window.location.href="school.html";}, 1500)
+                    } else {
+                        document.getElementById(soundId).play();
+                        }
+                        
+/*                  //pause and reset any other audio currently playing
                     $('audio').each(function(i,e) {
                         e.pause();
                         e.currentTime = 0;
                     });
                     
-                } else {
+                  } else {
                     if ($(':focus').hasClass('daily')) {
                         document.getElementById('daily').play()
                     }
@@ -487,7 +498,7 @@ $('.info').focus();
                         document.getElementById('colors_page').play(); 
                         setTimeout(function() {window.location.href="colors.html";}, 2000)}
                 
-                }
+                }*/
                 
             }
 
