@@ -11,25 +11,25 @@
     <div class="info" tabindex="1">
         <img src="images/info.jpg" alt="You are on Vocab">
     </div>
-    <div class="btn a day" tabindex="2">Day</div>
-    <div class="btn b night" tabindex="3">Night</div>
-    <div class="btn c morning" tabindex="4">Morning</div>
-    <div class="btn d afternoon" tabindex="5">Afternoon</div>
-    <div class="btn e aqueduct" tabindex="6">Aqueduct</div>
-    <div class="btn f mosaic" tabindex="7">Mosaic</div>
-    <div class="btn g ancient" tabindex="8">Ancient</div>
-    <div class="btn h old" tabindex="9">Old</div>
-    <div class="btn i new" tabindex="10">New</div>
-    <div class="btn j meteor_shower" tabindex="11">Meteor Shower</div>
-    <div class="btn k happy_birthday" tabindex="12">Happy Birthday</div>
-    <div class="btn l panda" tabindex="13">Panda</div>
-    <div class="btn m telescope" tabindex="14">Telescope</div>
-    <div class="btn n jam_board" tabindex="15">Jam Board</div>
-    <div class="btn o google_slides" tabindex="16">Google Slides</div>
+    <div class="btn a day" tabindex="2" onfocus="whisper()">Day</div>
+    <div class="btn b night" tabindex="3" onfocus="whisper()">Night</div>
+    <div class="btn c morning" tabindex="4" onfocus="whisper()">Morning</div>
+    <div class="btn d afternoon" tabindex="5" onfocus="whisper()">Afternoon</div>
+    <div class="btn e aqueduct" tabindex="6" onfocus="whisper()">Aqueduct</div>
+    <div class="btn f mosaic" tabindex="7" onfocus="whisper()">Mosaic</div>
+    <div class="btn g ancient" tabindex="8" onfocus="whisper()">Ancient</div>
+    <div class="btn h old" tabindex="9" onfocus="whisper()">Old</div>
+    <div class="btn i new" tabindex="10" onfocus="whisper()">New</div>
+    <div class="btn j meteor_shower" tabindex="11" onfocus="whisper()">Meteor Shower</div>
+    <div class="btn k happy_birthday" tabindex="12" onfocus="whisper()">Happy Birthday</div>
+    <div class="btn l panda" tabindex="13" onfocus="whisper()">Panda</div>
+    <div class="btn m telescope" tabindex="14" onfocus="whisper()">Telescope</div>
+    <div class="btn n jam_board" tabindex="15" onfocus="whisper()">Jam Board</div>
+    <div class="btn o google_slides" tabindex="16" onfocus="whisper()">Google Slides</div>
+    <div class="btn p up school_page" tabindex="0" onfocus="whisper()">
+        <img src="images/up.jpg">
+    </div>
 
-    <a href="javascript:location.replace('school.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
 
     <audio id="day" controls style="display:none"><source src="sounds/day.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
     <audio id="night" controls style="display:none"><source src="sounds/night.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
@@ -46,7 +46,9 @@
     <audio id="telescope" controls style="display:none"><source src="sounds/telescope.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
     <audio id="jam_board" controls style="display:none"><source src="sounds/jam_board.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
     <audio id="google_slides" controls style="display:none"><source src="sounds/google_slides.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
- 
+    <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="up_w" controls style="display:none"><source src="sounds/up_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>
 </body>

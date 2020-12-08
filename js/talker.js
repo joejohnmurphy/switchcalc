@@ -3,20 +3,39 @@ var fired = false;
 var focusedItem = null;
 
    var whisper = function() {
-                    if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 0.1; document.getElementById('green').play()}
-                    if ($(':focus').hasClass('blue')) {document.getElementById('blue').volume = 0.1; document.getElementById('blue').play()}
-                    if ($(':focus').hasClass('school_page')) {document.getElementById('school_w').volume = 0.1; document.getElementById('school_w').play()}
-                    if ($(':focus').hasClass('calculator_page')) {document.getElementById('calculator_w').volume = 0.1; document.getElementById('calculator_w').play()}
-                    if ($(':focus').hasClass('social_page')) {document.getElementById('social_w').volume = 0.1; document.getElementById('social_w').play()}
-                    if ($(':focus').hasClass('feelings_page')) {document.getElementById('feelings_w').volume = 0.1; document.getElementById('feelings_w').play()}
-                    if ($(':focus').hasClass('want_page')) {document.getElementById('want_w').volume = 0.1; document.getElementById('want_w').play()}
-                    if ($(':focus').hasClass('need_page')) {document.getElementById('need_w').volume = 0.1; document.getElementById('need_w').play()}
-                    if ($(':focus').hasClass('about_page')) {document.getElementById('about_w').volume = 0.1; document.getElementById('about_w').play()}
-                    if ($(':focus').hasClass('family_page')) {document.getElementById('family_w').volume = 0.1; document.getElementById('family_w').play()}
-                    if ($(':focus').hasClass('food_page')) {document.getElementById('food_w').volume = 0.1; document.getElementById('food_w').play()}
-                    if ($(':focus').hasClass('up')) {document.getElementById('up_w').volume = 0.1; document.getElementById('up_w').play()}
-                        
-                };
+    if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 0.1; document.getElementById('green').play()}
+    if ($(':focus').hasClass('blue')) {document.getElementById('blue').volume = 0.1; document.getElementById('blue').play()}
+    if ($(':focus').hasClass('school_page')) {document.getElementById('school_w').volume = 0.1; document.getElementById('school_w').play()}
+    if ($(':focus').hasClass('calculator_page')) {document.getElementById('calculator_w').volume = 0.1; document.getElementById('calculator_w').play()}
+    if ($(':focus').hasClass('social_page')) {document.getElementById('social_w').volume = 0.1; document.getElementById('social_w').play()}
+    if ($(':focus').hasClass('feelings_page')) {document.getElementById('feelings_w').volume = 0.1; document.getElementById('feelings_w').play()}
+    if ($(':focus').hasClass('want_page')) {document.getElementById('want_w').volume = 0.1; document.getElementById('want_w').play()}
+    if ($(':focus').hasClass('need_page')) {document.getElementById('need_w').volume = 0.1; document.getElementById('need_w').play()}
+    if ($(':focus').hasClass('about_page')) {document.getElementById('about_w').volume = 0.1; document.getElementById('about_w').play()}
+    if ($(':focus').hasClass('family_page')) {document.getElementById('family_w').volume = 0.1; document.getElementById('family_w').play()}
+    if ($(':focus').hasClass('food_page')) {document.getElementById('food_w').volume = 0.1; document.getElementById('food_w').play()}
+    if ($(':focus').hasClass('up')) {document.getElementById('up_w').volume = 0.1; document.getElementById('up_w').play()}
+    if ($(':focus').hasClass('vocab_page')) {document.getElementById('vocab_w').volume = 0.1; document.getElementById('vocab_w').play()}
+    if ($(':focus').hasClass('friends_page')) {document.getElementById('friends_w').volume = 0.1; document.getElementById('friends_w').play()}
+    if ($(':focus').hasClass('teachers_page')) {document.getElementById('teachers_w').volume = 0.1; document.getElementById('teachers_w').play()}
+    if ($(':focus').hasClass('schedule_page')) {document.getElementById('schedule_w').volume = 0.1; document.getElementById('schedule_w').play()}
+    if ($(':focus').hasClass('colors_page')) {document.getElementById('colors_w').volume = 0.1; document.getElementById('colors_w').play()}
+    if ($(':focus').hasClass('day')) {document.getElementById('day_w').volume = 0.1; document.getElementById('day_w').play()}
+    if ($(':focus').hasClass('night')) {document.getElementById('night_w').volume = 0.1; document.getElementById('night_w').play()}
+    if ($(':focus').hasClass('morning')) {document.getElementById('morning_w').volume = 0.1; document.getElementById('morning_w').play()}
+    if ($(':focus').hasClass('afternoon')) {document.getElementById('afternoon_w').volume = 0.1; document.getElementById('afternoon_w').play()}
+    if ($(':focus').hasClass('aqueduct')) {document.getElementById('aqueduct_w').volume = 0.1; document.getElementById('aqueduct_w').play()}
+    if ($(':focus').hasClass('mosaic')) {document.getElementById('mosaic_w').volume = 0.1; document.getElementById('mosaic_w').play()}
+    if ($(':focus').hasClass('ancient')) {document.getElementById('ancient_w').volume = 0.1; document.getElementById('ancient_w').play()}
+    if ($(':focus').hasClass('old')) {document.getElementById('old_w').volume = 0.1; document.getElementById('old_w').play()}
+    if ($(':focus').hasClass('new')) {document.getElementById('new_w').volume = 0.1; document.getElementById('new_w').play()}
+    if ($(':focus').hasClass('meteor_shower')) {document.getElementById('meteor_shower_w').volume = 0.1; document.getElementById('meteor_shower_w').play()}
+    if ($(':focus').hasClass('happy_birthday')) {document.getElementById('happy_birthday_w').volume = 0.1; document.getElementById('happy_birthday_w').play()}
+    if ($(':focus').hasClass('panda')) {document.getElementById('panda_w').volume = 0.1; document.getElementById('panda_w').play()}
+    if ($(':focus').hasClass('telescope')) {document.getElementById('telescope_w').volume = 0.1; document.getElementById('telescope_w').play()}
+    if ($(':focus').hasClass('jam_board')) {document.getElementById('jam_board_w').volume = 0.1; document.getElementById('jam_board_w').play()}
+    if ($(':focus').hasClass('google_slides')) {document.getElementById('google_slides_w').volume = 0.1; document.getElementById('google_slides_w').play()}
+        };
 
 // JQuery - this applies the code once the document is loaded
 $(document).ready(function() {
@@ -344,7 +363,7 @@ $('.info').focus();
                     if ($(':focus').hasClass('choir')) {document.getElementById('choir').play()}
                     if ($(':focus').hasClass('red')) {document.getElementById('red').play()}
                     if ($(':focus').hasClass('yellow')) {document.getElementById('yellow').play()}
-                    if ($(':focus').hasClass('green')) {document.getElementById('green').volume = 1; document.getElementById("green").playbackRate = 1; document.getElementById('green').play()}
+                    if ($(':focus').hasClass('green')) {document.getElementById('green').play()}
                     if ($(':focus').hasClass('blue')) {document.getElementById('blue').play()}
                     if ($(':focus').hasClass('purple')) {document.getElementById('purple').play()}
                     if ($(':focus').hasClass('black')) {document.getElementById('black').play()}
@@ -452,7 +471,23 @@ $('.info').focus();
                     if ($(':focus').hasClass('home_page')) {document.getElementById('home_page').volume = 0.1;
                         document.getElementById('home_page').play(); 
                         setTimeout(function() {window.location.href="home.html";}, 2000)}
-          }
+                    if ($(':focus').hasClass('vocab_page')) {document.getElementById('vocab_page').volume = 0.1;
+                        document.getElementById('vocab_page').play(); 
+                        setTimeout(function() {window.location.href="vocab.html";}, 2000)}
+                    if ($(':focus').hasClass('friends_page')) {document.getElementById('friends_page').volume = 0.1;
+                        document.getElementById('friends_page').play(); 
+                        setTimeout(function() {window.location.href="friends.html";}, 2000)}
+                    if ($(':focus').hasClass('teachers_page')) {document.getElementById('teachers_page').volume = 0.1;
+                        document.getElementById('teachers_page').play(); 
+                        setTimeout(function() {window.location.href="teachers.html";}, 2000)}
+                    if ($(':focus').hasClass('schedule_page')) {document.getElementById('schedule_page').volume = 0.1;
+                        document.getElementById('schedule_page').play(); 
+                        setTimeout(function() {window.location.href="schedule.html";}, 2000)}
+                    if ($(':focus').hasClass('colors_page')) {document.getElementById('colors_page').volume = 0.1;
+                        document.getElementById('colors_page').play(); 
+                        setTimeout(function() {window.location.href="colors.html";}, 2000)}
+                
+                }
                 
             }
 

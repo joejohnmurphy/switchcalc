@@ -9,17 +9,32 @@
 
 <body>
     <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on school">
+        <img src="images/info.jpg">
     </div>
-    <a href="javascript:location.replace('vocab.html')" class="btn b" tabindex="3">Go to vocab</a>
-    <a href="javascript:location.replace('friends.html')" class="btn c" tabindex="4">Go to friends</a>
-    <a href="javascript:location.replace('teachers.html')" class="btn d" tabindex="5">Go to teachers</a>
-    <a href="javascript:location.replace('schedule.html')" class="btn e" tabindex="6">Go to schedule</a>
-    <a href="javascript:location.replace('colors.html')" class="btn f" tabindex="7">Go to colors</a>
+    <div class="btn a vocab_page page" tabindex="2" onfocus="whisper()">Vocab</div>
+    <div class="btn b friends_page page" tabindex="3" onfocus="whisper()">Friends</div>
+    <div class="btn c teachers_page page" tabindex="4" onfocus="whisper()">Teachers</div>
+    <div class="btn d schedule_page page" tabindex="5" onfocus="whisper()">Schedule</div>
+    <div class="btn e colors_page page" tabindex="6" onfocus="whisper()">Colors</div>
+    <div class="btn k up home_page" tabindex="0" onfocus="whisper()">
+        <img src="images/up.jpg">
+    </div>
 
-    <a href="javascript:location.replace('home.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+
+    <audio id="vocab_page" controls style="display:none"><source src="sounds/vocab_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="vocab_w" controls style="display:none"><source src="sounds/vocab_w.mp3" type="audio/mpeg"> Your browser 
+    does not support the audio element.</audio>
+    <audio id="friends_page" controls style="display:none"><source src="sounds/friends_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="friends_w" controls style="display:none"><source src="sounds/friends_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="teachers_page" controls style="display:none"><source src="sounds/teachers_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="teachers_w" controls style="display:none"><source src="sounds/teachers_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="schedule_page" controls style="display:none"><source src="sounds/schedule_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="schedule_w" controls style="display:none"><source src="sounds/schedule_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="colors_page" controls style="display:none"><source src="sounds/colors_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="colors_w" controls style="display:none"><source src="sounds/colors_w.mp3" type="audio/mpeg"> Your browser 
+    does not support the audio element.</audio>
+    <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <audio id="up_w" controls style="display:none"><source src="sounds/up_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>
