@@ -7,36 +7,69 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on teachers">
-    </div>
-    <a href="javascript:location.replace('teachers_mcclellan.html')" class="btn a" tabindex="2">Mrs. McClellan</a>
-    <a href="javascript:location.replace('teachers_maley.html')" class="btn a" tabindex="2">Ms. Maley</a>
-    <a href="javascript:location.replace('teachers_gannon.html')" class="btn a" tabindex="2">Ms. Gannon</a>
-    <a href="javascript:location.replace('teachers_biz.html')" class="btn a" tabindex="2">Mrs. Biz</a>
-    <a href="javascript:location.replace('teachers_springstroh.html')" class="btn a" tabindex="2">Mrs. Springstroh</a>
-    <a href="javascript:location.replace('teachers_cassens.html')" class="btn a" tabindex="2">Mr. Cassens</a>
-    <a href="javascript:location.replace('teachers_rodriguez.html')" class="btn a" tabindex="2">Mrs. Rodriguez</a>
-    <a href="javascript:location.replace('teachers_craig.html')" class="btn a" tabindex="2">Mrs. Craig</a>
-    <a href="javascript:location.replace('teachers_fleming.html')" class="btn a" tabindex="2">Mr. Fleming</a>
-    <a href="javascript:location.replace('teachers_schallmoser.html')" class="btn a" tabindex="2">Mrs. Schallmoser</a>
-    <a href="javascript:location.replace('teachers_mr_e.html')" class="btn a" tabindex="2">Mr. E</a>
-    <a href="javascript:location.replace('school.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
-    <audio id="mcclellan" controls style="display:none"><source src="sounds/mcclellan.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="cassens" controls style="display:none"><source src="sounds/cassens.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="maley" controls style="display:none"><source src="sounds/maley.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="springstroh" controls style="display:none"><source src="sounds/springstroh.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="rodriguez" controls style="display:none"><source src="sounds/rodriguez.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="craig" controls style="display:none"><source src="sounds/craig.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="fleming" controls style="display:none"><source src="sounds/fleming.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="schallmoser" controls style="display:none"><source src="sounds/schallmoser.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="mr_e" controls style="display:none"><source src="sounds/mr_e.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="biz" controls style="display:none"><source src="sounds/biz.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="gannon" controls style="display:none"><source src="sounds/gannon.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<body>
+    <div data-sound="teachers_page" data-move="teachers.html" class="btn a teachers_page page_silent" tabindex="1" onfocus="whisper('teachers_page', 'teachers_page')">TEACHERS
+    </div>
+        <audio id="teachers_page" controls style="display:none"><source src="sounds/teachers_page.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="mcclellan" data-move="home.html" class="btn mcclellan page move" tabindex="2" onfocus="whisper('mcclellan', 'mcclellan_w')">Mrs. McClellan
+    </div>
+        <audio id="mcclellan" controls style="display:none"><source src="sounds/mcclellan.mp3" type="audio/mpeg"></audio>
+        <audio id="mcclellan_w" controls style="display:none"><source src="sounds/mcclellan_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="rodriguez" data-move="home.html" class="btn rodriguez page move" tabindex="3" onfocus="whisper('rodriguez', 'rodriguez_w')">Mrs. Rodriguez
+    </div>
+        <audio id="rodriguez" controls style="display:none"><source src="sounds/rodriguez.mp3" type="audio/mpeg"></audio>
+        <audio id="rodriguez_w" controls style="display:none"><source src="sounds/rodriguez_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="gannon" data-move="home.html" class="btn gannon page move" tabindex="4" onfocus="whisper('gannon', 'gannon_w')">Ms. Gannon
+    </div>
+        <audio id="gannon" controls style="display:none"><source src="sounds/gannon.mp3" type="audio/mpeg"></audio>
+        <audio id="gannon_w" controls style="display:none"><source src="sounds/gannon_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="biz" data-move="home.html" class="btn biz page move" tabindex="5" onfocus="whisper('biz', 'biz_w')">Mrs. Biz
+    </div>
+        <audio id="biz" controls style="display:none"><source src="sounds/biz.mp3" type="audio/mpeg"></audio>
+        <audio id="biz_w" controls style="display:none"><source src="sounds/biz_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="springstroh" data-move="home.html" class="btn springstroh page move" tabindex="6" onfocus="whisper('springstroh', 'springstroh_w')">Mrs. Springstroh
+    </div>
+        <audio id="springstroh" controls style="display:none"><source src="sounds/springstroh.mp3" type="audio/mpeg"></audio>
+        <audio id="springstroh_w" controls style="display:none"><source src="sounds/springstroh_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="cassens" data-move="home.html" class="btn cassens page move" tabindex="7" onfocus="whisper('cassens', 'cassens_w')">Mr. Cassens
+    </div>
+        <audio id="cassens" controls style="display:none"><source src="sounds/cassens.mp3" type="audio/mpeg"></audio>
+        <audio id="cassens_w" controls style="display:none"><source src="sounds/cassens_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="craig" data-move="home.html" class="btn craig page move" tabindex="8" onfocus="whisper('craig', 'craig_w')">Mrs. Craig
+    </div>
+        <audio id="craig" controls style="display:none"><source src="sounds/craig.mp3" type="audio/mpeg"></audio>
+        <audio id="craig_w" controls style="display:none"><source src="sounds/craig_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="schallmoser" data-move="home.html" class="btn schallmoser page move" tabindex="9" onfocus="whisper('schallmoser', 'schallmoser_w')">Mrs. Schallmoser
+    </div>
+        <audio id="schallmoser" controls style="display:none"><source src="sounds/schallmoser.mp3" type="audio/mpeg"></audio>
+        <audio id="schallmoser_w" controls style="display:none"><source src="sounds/schallmoser_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="mr_e" data-move="home.html" class="btn mr_e page move" tabindex="10" onfocus="whisper('mr_e', 'mr_e_w')">Mr. E
+    </div>
+        <audio id="mr_e" controls style="display:none"><source src="sounds/mr_e.mp3" type="audio/mpeg"></audio>
+        <audio id="mr_e_w" controls style="display:none"><source src="sounds/mr_e_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="11" onfocus="whisper('home_page', 'home_w')">
+        <img src="images/home.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="school_page" data-move="school.html" class="btn back school_page page_silent" tabindex="0" onfocus="whisper('school_page', 'school_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
+        <audio id="school_back_w" controls style="display:none"><source src="sounds/school_back_w.mp3" type="audio/mpeg"></audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

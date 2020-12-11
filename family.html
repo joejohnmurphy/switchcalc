@@ -7,26 +7,48 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on family">
-    </div>
-    <a href="javascript:location.replace('family_mom.html')" class="btn a" tabindex="2">Mom</a>
-    <a href="javascript:location.replace('family_dad.html')" class="btn b" tabindex="3">Dad</a>
-    <a href="javascript:location.replace('family_tessa.html')" class="btn c" tabindex="4">Tessa</a>
-    <a href="javascript:location.replace('family_goofma.html')" class="btn d" tabindex="5">Goofma</a>
-    <a href="javascript:location.replace('family_grandpa.html')" class="btn e" tabindex="6">Grandpa</a>
-    <a href="javascript:location.replace('family_grandma.html')" class="btn f" tabindex="7">Grandma</a>
-    <a href="javascript:location.replace('home.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
-    <audio id="mom" controls style="display:none"><source src="sounds/mom.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="dad" controls style="display:none"><source src="sounds/dad.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="tessa" controls style="display:none"><source src="sounds/tessa.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="goofma" controls style="display:none"><source src="sounds/goofma.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="grandpa" controls style="display:none"><source src="sounds/grandpa.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="grandma" controls style="display:none"><source src="sounds/grandma.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<body>
+    <div data-sound="family_page" data-move="family.html" class="btn a family_page page_silent" tabindex="1" onfocus="whisper('family_page', 'family_page')">FAMILY
+    </div>
+        <audio id="family_page" controls style="display:none"><source src="sounds/family_page.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="mom" data-move="home.html" class="btn mom page move" tabindex="2" onfocus="whisper('mom', 'mom_w')">Mom
+    </div>
+        <audio id="mom" controls style="display:none"><source src="sounds/mom.mp3" type="audio/mpeg"></audio>
+        <audio id="mom_w" controls style="display:none"><source src="sounds/mom_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="dad" data-move="home.html" class="btn dad page move" tabindex="3" onfocus="whisper('dad', 'dad_w')">Dad
+    </div>
+        <audio id="dad" controls style="display:none"><source src="sounds/dad.mp3" type="audio/mpeg"></audio>
+        <audio id="dad_w" controls style="display:none"><source src="sounds/dad_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="tessa" data-move="home.html" class="btn tessa page move" tabindex="4" onfocus="whisper('tessa', 'tessa_w')">Tessa
+    </div>
+        <audio id="tessa" controls style="display:none"><source src="sounds/tessa.mp3" type="audio/mpeg"></audio>
+        <audio id="tessa_w" controls style="display:none"><source src="sounds/tessa_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="goofma" data-move="home.html" class="btn goofma page move" tabindex="5" onfocus="whisper('goofma', 'goofma_w')">Goofma
+    </div>
+        <audio id="goofma" controls style="display:none"><source src="sounds/goofma.mp3" type="audio/mpeg"></audio>
+        <audio id="goofma_w" controls style="display:none"><source src="sounds/goofma_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="grandpa" data-move="home.html" class="btn grandpa page move" tabindex="6" onfocus="whisper('grandpa', 'grandpa_w')">Grandpa
+    </div>
+        <audio id="grandpa" controls style="display:none"><source src="sounds/grandpa.mp3" type="audio/mpeg"></audio>
+        <audio id="grandpa_w" controls style="display:none"><source src="sounds/grandpa_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="grandma" data-move="home.html" class="btn grandma page move" tabindex="7" onfocus="whisper('grandma', 'grandma_w')">Grandma
+    </div>
+        <audio id="grandma" controls style="display:none"><source src="sounds/grandma.mp3" type="audio/mpeg"></audio>
+        <audio id="grandma_w" controls style="display:none"><source src="sounds/grandma_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

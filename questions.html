@@ -3,29 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Social</title>
+    <title>Questions</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on questions">
+    <div data-sound="questions_page_w" data-move="questions.html" class="btn a questions_page_w page_silent" tabindex="1" onfocus="whisper('questions_page_w', 'questions_page_w')">QUESTIONS
     </div>
-    <div class="btn a how_doing" tabindex="2">How are you doing?</div>
-    <div class="btn b how_weekend" tabindex="3">How was your weekend?</div>
-    <div class="btn c what_weekend" tabindex="4">What are you doing this weekend?</div>
-    <div class="btn d what_sports" tabindex="5">What's your favorite sports team?</div>
-    <div class="btn e what_tv" tabindex="6">What's your favorite TV show?</div>
+        <audio id="questions_page_w" controls style="display:none"><source src="sounds/questions_page_w.mp3" type="audio/mpeg"></audio>
 
-    <a href="javascript:location.replace('social.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+    <div data-sound="how_doing" class="btn how_doing" tabindex="2" onfocus="whisper('how_doing', 'how_doing_w')">How are you?</div>
+        <audio id="how_doing" controls style="display:none"><source src="sounds/how_doing.mp3" type="audio/mpeg"></audio>
+        <audio id="how_doing_w" controls style="display:none"><source src="sounds/how_doing_w.mp3" type="audio/mpeg"></audio>
 
-    <audio id="how_doing" controls style="display:none"><source src="sounds/how_doing.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="how_weekend" controls style="display:none"><source src="sounds/how_weekend.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="what_weekend" controls style="display:none"><source src="sounds/what_weekend.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="what_sports" controls style="display:none"><source src="sounds/what_sports.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="what_tv" controls style="display:none"><source src="sounds/what_tv.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <div data-sound="how_weekend" class="btn how_weekend" tabindex="3" onfocus="whisper('how_weekend', 'how_weekend_w')">How was your weekend? </div>
+        <audio id="how_weekend" controls style="display:none"><source src="sounds/how_weekend.mp3" type="audio/mpeg"></audio>
+        <audio id="how_weekend_w" controls style="display:none"><source src="sounds/how_weekend_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="what_weekend" class="btn what_weekend" tabindex="4" onfocus="whisper('what_weekend', 'what_weekend_w')">What are you doing this weekend?</div>
+        <audio id="what_weekend" controls style="display:none"><source src="sounds/what_weekend.mp3" type="audio/mpeg"></audio>
+        <audio id="what_weekend_w" controls style="display:none"><source src="sounds/what_weekend_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="what_sports" class="btn what_sports" tabindex="5" onfocus="whisper('what_sports', 'what_sports_w')">Favorite sports team?</div>
+        <audio id="what_sports" controls style="display:none"><source src="sounds/what_sports.mp3" type="audio/mpeg"></audio>
+        <audio id="what_sports_w" controls style="display:none"><source src="sounds/what_sports_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="what_tv" class="btn what_tv" tabindex="6" onfocus="whisper('what_tv', 'what_tv_w')">Favorite show?</div>
+        <audio id="what_tv" controls style="display:none"><source src="sounds/what_tv.mp3" type="audio/mpeg"></audio>
+        <audio id="what_tv_w" controls style="display:none"><source src="sounds/what_tv_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="7" onfocus="whisper('home_page', 'home_w')">
+        <img src="images/home.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="social_page" data-move="social.html" class="btn back social_page page_silent" tabindex="0" onfocus="whisper('social_page', 'social_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="social_page" controls style="display:none"><source src="sounds/social_page.mp3" type="audio/mpeg"></audio>
+        <audio id="social_back_w" controls style="display:none"><source src="sounds/social_back_w.mp3" type="audio/mpeg"></audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

@@ -7,30 +7,50 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on about me">
-    </div>
-    <div class="btn a name" tabindex="2">My name</div>
-    <div class="btn b age" tabindex="3">My age</div>
-    <div class="btn c tv" tabindex="4">My favorite TV show</div>
-    <div class="btn d food" tabindex="5">My favorite food</div>
-    <div class="btn e sport" tabindex="6">My favorite sport</div>
-    <div class="btn f team" tabindex="7">My favorite team</div>
-    <div class="btn g music" tabindex="8">My favorite music</div>
-    <div class="btn h sister" tabindex="9">My sister</div>
-    <a href="javascript:location.replace('home.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
-    <audio id="name" controls style="display:none"><source src="sounds/name.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="age" controls style="display:none"><source src="sounds/age.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="tv" controls style="display:none"><source src="sounds/tv.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="food" controls style="display:none"><source src="sounds/food.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="sport" controls style="display:none"><source src="sounds/sport.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="team" controls style="display:none"><source src="sounds/team.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="music" controls style="display:none"><source src="sounds/music.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="sister" controls style="display:none"><source src="sounds/sister.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<body>
+    <div data-sound="about_page" data-move="about.html" class="btn a about_page page_silent" tabindex="1" onfocus="whisper('about_page', 'about_page')">ABOUT ME
+    </div>
+        <audio id="about_page" controls style="display:none"><source src="sounds/about_page.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="name" class="btn name" tabindex="2" onfocus="whisper('name', 'name_w')">My name</div>
+        <audio id="name" controls style="display:none"><source src="sounds/name.mp3" type="audio/mpeg"></audio>
+        <audio id="name_w" controls style="display:none"><source src="sounds/name_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="age" class="btn age" tabindex="3" onfocus="whisper('age', 'age_w')">My age</div>
+        <audio id="age" controls style="display:none"><source src="sounds/age.mp3" type="audio/mpeg"></audio>
+        <audio id="age_w" controls style="display:none"><source src="sounds/age_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="tv" class="btn tv" tabindex="4" onfocus="whisper('tv', 'tv_w')">My favorite show</div>
+        <audio id="tv" controls style="display:none"><source src="sounds/tv.mp3" type="audio/mpeg"></audio>
+        <audio id="tv_w" controls style="display:none"><source src="sounds/tv_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="favorite_food" class="btn favorite_food" tabindex="5" onfocus="whisper('favorite_food', 'favorite_food_w')">My favorite food</div>
+        <audio id="favorite_food" controls style="display:none"><source src="sounds/favorite_food.mp3" type="audio/mpeg"></audio>
+        <audio id="favorite_food_w" controls style="display:none"><source src="sounds/favorite_food_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="sport" class="btn sport" tabindex="6" onfocus="whisper('sport', 'sport_w')">My favorite sport</div>
+        <audio id="sport" controls style="display:none"><source src="sounds/sport.mp3" type="audio/mpeg"></audio>
+        <audio id="sport_w" controls style="display:none"><source src="sounds/sport_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="team" class="btn team" tabindex="7" onfocus="whisper('team', 'team_w')">My favorite team</div>
+        <audio id="team" controls style="display:none"><source src="sounds/team.mp3" type="audio/mpeg"></audio>
+        <audio id="team_w" controls style="display:none"><source src="sounds/team_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="music" class="btn music" tabindex="8" onfocus="whisper('music', 'music_w')">My favorite music</div>
+        <audio id="music" controls style="display:none"><source src="sounds/music.mp3" type="audio/mpeg"></audio>
+        <audio id="music_w" controls style="display:none"><source src="sounds/music_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="sister" class="btn sister" tabindex="9" onfocus="whisper('sister', 'sister_w')">My sister</div>
+        <audio id="sister" controls style="display:none"><source src="sounds/sister.mp3" type="audio/mpeg"></audio>
+        <audio id="sister_w" controls style="display:none"><source src="sounds/sister_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
         
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

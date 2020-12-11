@@ -215,4 +215,20 @@ function process(text) {
 
             break;
     }
+
+function myfun(){
+     // Write your business logic here
+const rightArrowKey = 90
+const event = new KeyboardEvent('keydown',{'key':rightArrowKey})
+document.dispatchEvent(event)
+}
+
+$(window).bind('onload', function(){
+  myfun();
+});
+
+$(window).bind('beforeunload', function(){
+  myfun();
+});
+
 }

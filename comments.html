@@ -3,39 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Social</title>
+    <title>Comments</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on comments">
+    <div data-sound="comments_page" data-move="comments.html" class="btn a comments_page page_silent" tabindex="1" onfocus="whisper('comments_page', 'comments_page')">COMMENTS
     </div>
-    <div class="btn a fine" tabindex="2">I am fine.</div>
-    <div class="btn b sounds_fun" tabindex="3">That sounds like fun.</div>
-    <div class="btn c thanks" tabindex="4">Thank you</div>
-    <div class="btn d joking" tabindex="5">I'm joking.</div>
-    <div class="btn e dont_like" tabindex="6">I don't like that.</div>
-    <div class="btn f nice_day" tabindex="7">Have a nice day!</div>
-    <div class="btn g good_morning" tabindex="8">Good morning.</div>
-    <div class="btn h cool" tabindex="9">That is cool.</div>
-    <div class="btn i was_fun" tabindex="10">It was fun.</div>
-    <div class="btn j delicious" tabindex="11">Delicious</div>
+        <audio id="comments_page" controls style="display:none"><source src="sounds/comments_page.mp3" type="audio/mpeg"></audio>
 
-    <a href="javascript:location.replace('social.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+    <div data-sound="fine" class="btn fine" tabindex="2" onfocus="whisper('fine', 'fine_w')">I'm fine</div>
+        <audio id="fine" controls style="display:none"><source src="sounds/fine.mp3" type="audio/mpeg"></audio>
+        <audio id="fine_w" controls style="display:none"><source src="sounds/fine_w.mp3" type="audio/mpeg"></audio>
 
-    <audio id="fine" controls style="display:none"><source src="sounds/fine.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="sounds_fun" controls style="display:none"><source src="sounds/sounds_fun.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="thanks" controls style="display:none"><source src="sounds/thanks.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="joking" controls style="display:none"><source src="sounds/joking.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="dont_like" controls style="display:none"><source src="sounds/dont_like.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="nice_day" controls style="display:none"><source src="sounds/nice_day.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="good_morning" controls style="display:none"><source src="sounds/good_morning.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="cool" controls style="display:none"><source src="sounds/cool.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="was_fun" controls style="display:none"><source src="sounds/was_fun.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="delicious" controls style="display:none"><source src="sounds/delicious.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    <div data-sound="sounds_fun" class="btn sounds_fun" tabindex="3" onfocus="whisper('sounds_fun', 'sounds_fun_w')">Sounds fun</div>
+        <audio id="sounds_fun" controls style="display:none"><source src="sounds/sounds_fun.mp3" type="audio/mpeg"></audio>
+        <audio id="sounds_fun_w" controls style="display:none"><source src="sounds/sounds_fun_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="thanks" class="btn thanks" tabindex="4" onfocus="whisper('thanks', 'thanks_w')">Thank you</div>
+        <audio id="thanks" controls style="display:none"><source src="sounds/thanks.mp3" type="audio/mpeg"></audio>
+        <audio id="thanks_w" controls style="display:none"><source src="sounds/thanks_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="joking" class="btn joking" tabindex="5" onfocus="whisper('joking', 'joking_w')">I'm joking</div>
+        <audio id="joking" controls style="display:none"><source src="sounds/joking.mp3" type="audio/mpeg"></audio>
+        <audio id="joking_w" controls style="display:none"><source src="sounds/joking_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="dont_like" class="btn dont_like" tabindex="6" onfocus="whisper('dont_like', 'dont_like_w')">I don't like that</div>
+        <audio id="dont_like" controls style="display:none"><source src="sounds/dont_like.mp3" type="audio/mpeg"></audio>
+        <audio id="dont_like_w" controls style="display:none"><source src="sounds/dont_like_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="nice_day" class="btn nice_day" tabindex="7" onfocus="whisper('nice_day', 'nice_day_w')">Have a nice day!</div>
+        <audio id="nice_day" controls style="display:none"><source src="sounds/nice_day.mp3" type="audio/mpeg"></audio>
+        <audio id="nice_day_w" controls style="display:none"><source src="sounds/nice_day_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="good_morning" class="btn good_morning" tabindex="8" onfocus="whisper('good_morning', 'good_morning_w')">Good morning</div>
+        <audio id="good_morning" controls style="display:none"><source src="sounds/good_morning.mp3" type="audio/mpeg"></audio>
+        <audio id="good_morning_w" controls style="display:none"><source src="sounds/good_morning_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="cool" class="btn cool" tabindex="9" onfocus="whisper('cool', 'cool_w')">That is cool</div>
+        <audio id="cool" controls style="display:none"><source src="sounds/cool.mp3" type="audio/mpeg"></audio>
+        <audio id="cool_w" controls style="display:none"><source src="sounds/cool_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="was_fun" class="btn was_fun" tabindex="10" onfocus="whisper('was_fun', 'was_fun_w')">It was fun</div>
+        <audio id="was_fun" controls style="display:none"><source src="sounds/was_fun.mp3" type="audio/mpeg"></audio>
+        <audio id="was_fun_w" controls style="display:none"><source src="sounds/was_fun_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="delicious" class="btn delicious" tabindex="11" onfocus="whisper('delicious', 'delicious_w')">Delicious</div>
+        <audio id="delicious" controls style="display:none"><source src="sounds/delicious.mp3" type="audio/mpeg"></audio>
+        <audio id="delicious_w" controls style="display:none"><source src="sounds/delicious_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="12" onfocus="whisper('home_page', 'home_w')">
+        <img src="images/home.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="social_page" data-move="social.html" class="btn back social_page page_silent" tabindex="0" onfocus="whisper('social_page', 'social_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="social_page" controls style="display:none"><source src="sounds/social_page.mp3" type="audio/mpeg"></audio>
+        <audio id="social_back_w" controls style="display:none"><source src="sounds/social_back_w.mp3" type="audio/mpeg"></audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

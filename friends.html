@@ -7,33 +7,69 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on friends">
-    </div>
-    <div class="btn a abby" tabindex="2">Abby</div>
-    <a href="javascript:location.replace('friends_adam.html')" class="btn b" tabindex="3">Adam</a>
-    <a href="javascript:location.replace('friends_grace.html')" class="btn c" tabindex="4">Grace</a>
-    <a href="javascript:location.replace('friends_john.html')" class="btn d" tabindex="5">John</a>
-    <a href="javascript:location.replace('friends_layla.html')" class="btn e" tabindex="6">Layla</a>
-    <a href="javascript:location.replace('friends_tj.html')" class="btn f" tabindex="7">T.J.</a>
-    <a href="javascript:location.replace('friends_teagan.html')" class="btn g" tabindex="8">Teagan</a>
-    <a href="javascript:location.replace('friends_trevor.html')" class="btn h" tabindex="9">Trevor</a>
-    <a href="javascript:location.replace('friends_zoey.html')" class="btn i" tabindex="10">Zoey</a>
-    <a href="javascript:location.replace('home.html')" class="btn j" tabindex="11">Go to Home</a>
-    <a href="javascript:location.replace('school.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
-    <audio id="abby" controls style="display:none"><source src="sounds/abby.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="adam" controls style="display:none"><source src="sounds/adam.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="grace" controls style="display:none"><source src="sounds/grace.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="john" controls style="display:none"><source src="sounds/john.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="layla" controls style="display:none"><source src="sounds/layla.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="tj" controls style="display:none"><source src="sounds/tj.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="teagan" controls style="display:none"><source src="sounds/teagan.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="trevor" controls style="display:none"><source src="sounds/trevor.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="zoey" controls style="display:none"><source src="sounds/zoey.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<body>
+    <div data-sound="friends_page" data-move="friends.html" class="btn a friends_page page_silent" tabindex="1" onfocus="whisper('friends_page', 'friends_page')">FRIENDS
+    </div>
+        <audio id="friends_page" controls style="display:none"><source src="sounds/friends_page.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="abby" data-move="home.html" class="btn abby page move" tabindex="2" onfocus="whisper('abby', 'abby_w')">Abby
+    </div>
+        <audio id="abby" controls style="display:none"><source src="sounds/abby.mp3" type="audio/mpeg"></audio>
+        <audio id="abby_w" controls style="display:none"><source src="sounds/abby_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="adam" data-move="home.html" class="btn adam page move" tabindex="3" onfocus="whisper('adam', 'adam_w')">Adam
+    </div>
+        <audio id="adam" controls style="display:none"><source src="sounds/adam.mp3" type="audio/mpeg"></audio>
+        <audio id="adam_w" controls style="display:none"><source src="sounds/adam_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="grace" data-move="home.html" class="btn grace page move" tabindex="4" onfocus="whisper('grace', 'grace_w')">Grace
+    </div>
+        <audio id="grace" controls style="display:none"><source src="sounds/grace.mp3" type="audio/mpeg"></audio>
+        <audio id="grace_w" controls style="display:none"><source src="sounds/grace_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="john" data-move="home.html" class="btn john page move" tabindex="5" onfocus="whisper('john', 'john_w')">John
+    </div>
+        <audio id="john" controls style="display:none"><source src="sounds/john.mp3" type="audio/mpeg"></audio>
+        <audio id="john_w" controls style="display:none"><source src="sounds/john_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="layla" data-move="home.html" class="btn layla page move" tabindex="6" onfocus="whisper('layla', 'layla_w')">Layla
+    </div>
+        <audio id="layla" controls style="display:none"><source src="sounds/layla.mp3" type="audio/mpeg"></audio>
+        <audio id="layla_w" controls style="display:none"><source src="sounds/layla_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="tj" data-move="home.html" class="btn tj page move" tabindex="7" onfocus="whisper('tj', 'tj_w')">T.J.
+    </div>
+        <audio id="tj" controls style="display:none"><source src="sounds/tj.mp3" type="audio/mpeg"></audio>
+        <audio id="tj_w" controls style="display:none"><source src="sounds/tj_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="teagan" data-move="home.html" class="btn teagan page move" tabindex="8" onfocus="whisper('teagan', 'teagan_w')">Teagan
+    </div>
+        <audio id="teagan" controls style="display:none"><source src="sounds/teagan.mp3" type="audio/mpeg"></audio>
+        <audio id="teagan_w" controls style="display:none"><source src="sounds/teagan_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="trevor" data-move="home.html" class="btn trevor page move" tabindex="9" onfocus="whisper('trevor', 'trevor_w')">Trevor
+    </div>
+        <audio id="trevor" controls style="display:none"><source src="sounds/trevor.mp3" type="audio/mpeg"></audio>
+        <audio id="trevor_w" controls style="display:none"><source src="sounds/trevor_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="zoey" data-move="home.html" class="btn zoey page move" tabindex="10" onfocus="whisper('zoey', 'zoey_w')">Zoey
+    </div>
+        <audio id="zoey" controls style="display:none"><source src="sounds/zoey.mp3" type="audio/mpeg"></audio>
+        <audio id="zoey_w" controls style="display:none"><source src="sounds/zoey_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="11" onfocus="whisper('home_page', 'home_w')">
+        <img src="images/home.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="school_page" data-move="school.html" class="btn back school_page page_silent" tabindex="0" onfocus="whisper('school_page', 'school_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
+        <audio id="school_back_w" controls style="display:none"><source src="sounds/school_back_w.mp3" type="audio/mpeg"></audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

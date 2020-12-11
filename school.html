@@ -7,34 +7,43 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg">
+    <div data-sound="school_page" data-move="school.html" class="btn a school_page page_silent" tabindex="1" onfocus="whisper('school_page', 'school_page')">SCHOOL
     </div>
-    <div class="btn a vocab_page page" tabindex="2" onfocus="whisper()">Vocab</div>
-    <div class="btn b friends_page page" tabindex="3" onfocus="whisper()">Friends</div>
-    <div class="btn c teachers_page page" tabindex="4" onfocus="whisper()">Teachers</div>
-    <div class="btn d schedule_page page" tabindex="5" onfocus="whisper()">Schedule</div>
-    <div class="btn e colors_page page" tabindex="6" onfocus="whisper()">Colors</div>
-    <div class="btn k up home_page" tabindex="0" onfocus="whisper()">
+        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="vocab_page" data-move="vocab.html" class="btn vocab_page page_silent" tabindex="2" onfocus="whisper('vocab_page', 'vocab_w')">Vocab
+    </div>
+        <audio id="vocab_page" controls style="display:none"><source src="sounds/vocab_page.mp3" type="audio/mpeg"></audio>
+        <audio id="vocab_w" controls style="display:none"><source src="sounds/vocab_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="friends_page" data-move="friends.html" class="btn friends_page page_silent" tabindex="3" onfocus="whisper('friends_page', 'friends_w')">Friends
+    </div>
+        <audio id="friends_page" controls style="display:none"><source src="sounds/friends_page.mp3" type="audio/mpeg"></audio>
+        <audio id="friends_w" controls style="display:none"><source src="sounds/friends_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="teachers_page" data-move="teachers.html" class="btn teachers_page page_silent" tabindex="4" onfocus="whisper('teachers_page', 'teachers_w')">Teachers
+    </div>
+        <audio id="teachers_page" controls style="display:none"><source src="sounds/teachers_page.mp3" type="audio/mpeg"></audio>
+        <audio id="teachers_w" controls style="display:none"><source src="sounds/teachers_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="schedule_page" data-move="schedule.html" class="btn schedule_page page_silent" tabindex="5" onfocus="whisper('schedule_page', 'schedule_w')">Schedule
+    </div>
+        <audio id="schedule_page" controls style="display:none"><source src="sounds/schedule_page.mp3" type="audio/mpeg"></audio>
+        <audio id="schedule_w" controls style="display:none"><source src="sounds/schedule_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="colors_page" data-move="colors.html" class="btn colors_page page_silent" tabindex="6" onfocus="whisper('colors_page', 'colors_w')">Colors
+    </div>
+        <audio id="colors_page" controls style="display:none"><source src="sounds/colors_page.mp3" type="audio/mpeg"></audio>
+        <audio id="colors_w" controls style="display:none"><source src="sounds/colors_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
         <img src="images/up.jpg">
     </div>
-
-
-    <audio id="vocab_page" controls style="display:none"><source src="sounds/vocab_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="vocab_w" controls style="display:none"><source src="sounds/vocab_w.mp3" type="audio/mpeg"> Your browser 
-    does not support the audio element.</audio>
-    <audio id="friends_page" controls style="display:none"><source src="sounds/friends_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="friends_w" controls style="display:none"><source src="sounds/friends_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="teachers_page" controls style="display:none"><source src="sounds/teachers_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="teachers_w" controls style="display:none"><source src="sounds/teachers_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="schedule_page" controls style="display:none"><source src="sounds/schedule_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="schedule_w" controls style="display:none"><source src="sounds/schedule_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="colors_page" controls style="display:none"><source src="sounds/colors_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="colors_w" controls style="display:none"><source src="sounds/colors_w.mp3" type="audio/mpeg"> Your browser 
-    does not support the audio element.</audio>
-    <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="up_w" controls style="display:none"><source src="sounds/up_w.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

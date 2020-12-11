@@ -7,27 +7,53 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on schedule">
-    </div>
-    <div class="btn a math" tabindex="2">Math</div>
-    <div class="btn b cwt" tabindex="3">C.W.T.</div>
-    <a href="javascript:location.replace('cooking.html')" class="btn c" tabindex="4">Cooking</a>
-    <div class="btn d english" tabindex="5">English</div>
-    <div class="btn e global_studies" tabindex="6">Global Studies</div>
-    <div class="btn f digital_tools" tabindex="7">Digital Tools</div>
-    <div class="btn g resource" tabindex="8">Resource</div>
-    <a href="javascript:location.replace('school.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
-    <audio id="math" controls style="display:none"><source src="sounds/math.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="cwt" controls style="display:none"><source src="sounds/cwt.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="english" controls style="display:none"><source src="sounds/English.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="global_studies" controls style="display:none"><source src="sounds/global_studies.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="digital_tools" controls style="display:none"><source src="sounds/digital_tools.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="resource" controls style="display:none"><source src="sounds/resource.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<body>
+    <div data-sound="schedule_page" data-move="schedule.html" class="btn a schedule_page page_silent" tabindex="1" onfocus="whisper('schedule_page', 'schedule_page')">SCHEDULE
+    </div>
+        <audio id="schedule_page" controls style="display:none"><source src="sounds/schedule_page.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="math" class="btn math" tabindex="2" onfocus="whisper('math', 'math_w')">Math</div>
+        <audio id="math" controls style="display:none"><source src="sounds/math.mp3" type="audio/mpeg"></audio>
+        <audio id="math_w" controls style="display:none"><source src="sounds/math_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="cwt" class="btn cwt" tabindex="3" onfocus="whisper('cwt', 'cwt_w')">C.W.T.</div>
+        <audio id="cwt" controls style="display:none"><source src="sounds/cwt.mp3" type="audio/mpeg"></audio>
+        <audio id="cwt_w" controls style="display:none"><source src="sounds/cwt_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="cooking" data-move="cooking.html" class="btn cooking page" tabindex="4" onfocus="whisper('cooking', 'cooking_w')">Cooking
+    </div>
+        <audio id="cooking" controls style="display:none"><source src="sounds/cooking.mp3" type="audio/mpeg"></audio>
+        <audio id="cooking_w" controls style="display:none"><source src="sounds/cooking_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="english" class="btn english" tabindex="5" onfocus="whisper('english', 'english_w')">English</div>
+        <audio id="english" controls style="display:none"><source src="sounds/english.mp3" type="audio/mpeg"></audio>
+        <audio id="english_w" controls style="display:none"><source src="sounds/english_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="global_studies" class="btn global_studies" tabindex="6" onfocus="whisper('global_studies', 'global_studies_w')">Global Studies</div>
+        <audio id="global_studies" controls style="display:none"><source src="sounds/global_studies.mp3" type="audio/mpeg"></audio>
+        <audio id="global_studies_w" controls style="display:none"><source src="sounds/global_studies_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="digital_tools" class="btn digital_tools" tabindex="7" onfocus="whisper('digital_tools', 'digital_tools_w')">Digital Tools</div>
+        <audio id="digital_tools" controls style="display:none"><source src="sounds/digital_tools.mp3" type="audio/mpeg"></audio>
+        <audio id="digital_tools_w" controls style="display:none"><source src="sounds/digital_tools_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="resource" class="btn resource" tabindex="8" onfocus="whisper('resource', 'resource_w')">Resource</div>
+        <audio id="resource" controls style="display:none"><source src="sounds/resource.mp3" type="audio/mpeg"></audio>
+        <audio id="resource_w" controls style="display:none"><source src="sounds/resource_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="9" onfocus="whisper('home_page', 'home_w')">
+        <img src="images/home.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="school_page" data-move="school.html" class="btn back school_page page_silent" tabindex="0" onfocus="whisper('school_page', 'school_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
+        <audio id="school_back_w" controls style="display:none"><source src="sounds/school_back_w.mp3" type="audio/mpeg"></audio>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>

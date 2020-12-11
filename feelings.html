@@ -7,38 +7,63 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on Feelings">
+    <div data-sound="feelings_page" data-move="feelings.html" class="btn a feelings_page page_silent" tabindex="1" onfocus="whisper('feelings_page', 'feelings_page')">FEELINGS
     </div>
-    <div class="btn a happy" tabindex="2">I'm happy</div>
-    <div class="btn b sad" tabindex="3">I'm sad</div>
-    <div class="btn c excited" tabindex="4">I'm excited</div>
-    <div class="btn d tired" tabindex="5">I'm tired</div>
-    <div class="btn e sick" tabindex="6">I feel sick</div>
-    <div class="btn f confused" tabindex="7">I'm confused</div>
-    <div class="btn g bored" tabindex="8">I'm bored</div>
-    <div class="btn h nervous" tabindex="9">I'm nervous</div>
-    <div class="btn j mad" tabindex="10">I'm mad</div>
-    <div class="btn k scared" tabindex="11">I'm scared</div>
-    <div class="btn i focused" tabindex="12">I'm focused</div>
+        <audio id="feelings_page" controls style="display:none"><source src="sounds/feelings_page.mp3" type="audio/mpeg"></audio>
 
-    <a href="javascript:location.replace('social.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+    <div data-sound="happy" class="btn happy" tabindex="2" onfocus="whisper('happy', 'happy_w')">I'm happy</div>
+        <audio id="happy" controls style="display:none"><source src="sounds/happy.mp3" type="audio/mpeg"></audio>
+        <audio id="happy_w" controls style="display:none"><source src="sounds/happy_w.mp3" type="audio/mpeg"></audio>
 
-    <audio id="happy" controls style="display:none"><source src="sounds/happy.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="sad" controls style="display:none"><source src="sounds/sad.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="excited" controls style="display:none"><source src="sounds/excited.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="tired" controls style="display:none"><source src="sounds/tired.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="sick" controls style="display:none"><source src="sounds/sick.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="confused" controls style="display:none"><source src="sounds/confused.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="bored" controls style="display:none"><source src="sounds/bored.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="nervous" controls style="display:none"><source src="sounds/nervous.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="mad" controls style="display:none"><source src="sounds/mad.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="scared" controls style="display:none"><source src="sounds/scared.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="focused" controls style="display:none"><source src="sounds/focused.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
- 
+    <div data-sound="sad" class="btn sad" tabindex="3" onfocus="whisper('sad', 'sad_w')">I'm sad</div>
+        <audio id="sad" controls style="display:none"><source src="sounds/sad.mp3" type="audio/mpeg"></audio>
+        <audio id="sad_w" controls style="display:none"><source src="sounds/sad_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="excited" class="btn excited" tabindex="4" onfocus="whisper('excited', 'excited_w')">I'm excited</div>
+        <audio id="excited" controls style="display:none"><source src="sounds/excited.mp3" type="audio/mpeg"></audio>
+        <audio id="excited_w" controls style="display:none"><source src="sounds/excited_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="tired" class="btn tired" tabindex="5" onfocus="whisper('tired', 'tired_w')">I'm tired</div>
+        <audio id="tired" controls style="display:none"><source src="sounds/tired.mp3" type="audio/mpeg"></audio>
+        <audio id="tired_w" controls style="display:none"><source src="sounds/tired_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="sick" class="btn sick" tabindex="6" onfocus="whisper('sick', 'sick_w')">I feel sick</div>
+        <audio id="sick" controls style="display:none"><source src="sounds/sick.mp3" type="audio/mpeg"></audio>
+        <audio id="sick_w" controls style="display:none"><source src="sounds/sick_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="confused" class="btn confused" tabindex="7" onfocus="whisper('confused', 'confused_w')">I'm confused</div>
+        <audio id="confused" controls style="display:none"><source src="sounds/confused.mp3" type="audio/mpeg"></audio>
+        <audio id="confused_w" controls style="display:none"><source src="sounds/confused_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="bored" class="btn bored" tabindex="8" onfocus="whisper('bored', 'bored_w')">I'm bored</div>
+        <audio id="bored" controls style="display:none"><source src="sounds/bored.mp3" type="audio/mpeg"></audio>
+        <audio id="bored_w" controls style="display:none"><source src="sounds/bored_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="nervous" class="btn nervous" tabindex="9" onfocus="whisper('nervous', 'nervous_w')">I'm nervous</div>
+        <audio id="nervous" controls style="display:none"><source src="sounds/nervous.mp3" type="audio/mpeg"></audio>
+        <audio id="nervous_w" controls style="display:none"><source src="sounds/nervous_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="mad" class="btn mad" tabindex="10" onfocus="whisper('mad', 'mad_w')">I'm mad</div>
+        <audio id="mad" controls style="display:none"><source src="sounds/mad.mp3" type="audio/mpeg"></audio>
+        <audio id="mad_w" controls style="display:none"><source src="sounds/mad_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="scared" class="btn scared" tabindex="11" onfocus="whisper('scared', 'scared_w')">I'm scared</div>
+        <audio id="scared" controls style="display:none"><source src="sounds/scared.mp3" type="audio/mpeg"></audio>
+        <audio id="scared_w" controls style="display:none"><source src="sounds/scared_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="focused" class="btn focused" tabindex="12" onfocus="whisper('focused', 'focused_w')">I'm focused</div>
+        <audio id="focused" controls style="display:none"><source src="sounds/focused.mp3" type="audio/mpeg"></audio>
+        <audio id="focused_w" controls style="display:none"><source src="sounds/focused_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>
 </body>
