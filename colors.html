@@ -3,36 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Colors</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
+<script src = "js/menu.js"></script>
+
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on colors">
-    </div>
-    <div class="btn a red" tabindex="2">red</div>
-    <div class="btn b yellow" tabindex="3">yellow</div>
-    <div class="btn c green" tabindex="4" onfocus="whisper()">green</div>
-    <div class="btn d blue" tabindex="5" onfocus="whisper()">blue</div>
-    <div class="btn e purple" tabindex="6" >purple</div>
-    <div class="btn f black" tabindex="7">black</div>
-    <div class="btn g white" tabindex="8">white</div>
-    <div class="btn h brown" tabindex="9">brown</div>
-    <a href="javascript:location.replace('school.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
 
-    <audio id="red" controls style="display:none"><source src="sounds/red.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="yellow" controls style="display:none"><source src="sounds/yellow.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="green" controls style="display:none"><source src="sounds/green.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="blue" controls style="display:none"><source src="sounds/blue.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="purple" controls style="display:none"><source src="sounds/purple.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="black" controls style="display:none"><source src="sounds/black.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="white" controls style="display:none"><source src="sounds/white.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="brown" controls style="display:none"><source src="sounds/brown.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["COLORS", "red", "yellow", "green", "blue", "purple", "black", "white", "brown"]
+    sound = ["colors_page", "red", "yellow", "green", "blue", "purple", "black", "white", "brown"]
+    btnclass = ["a", "", "", "", "", "", "", "", ""]
+    move = ["",  "", "", "", "", "", "", "", ""]
+    up="school"
+</script>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
 
 </body>

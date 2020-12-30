@@ -3,50 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>School</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="school_page" data-move="school.html" class="btn a school_page page_silent" tabindex="1" onfocus="whisper('school_page', 'school_page')">SCHOOL
-    </div>
-        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="vocab_page" data-move="vocab.html" class="btn vocab_page page_silent" tabindex="2" onfocus="whisper('vocab_page', 'vocab_w')">Vocab
-    </div>
-        <audio id="vocab_page" controls style="display:none"><source src="sounds/vocab_page.mp3" type="audio/mpeg"></audio>
-        <audio id="vocab_w" controls style="display:none"><source src="sounds/vocab_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["SCHOOL", "Vocab", "Friends", "Teachers", "Schedule", "Colors"]
+    sound = ["school_page", "vocab", "friends", "teachers", "schedule", "colors"]
+    btnclass = ["a", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent"]
+    move = ["", "data-move=\'vocab.html\'", "data-move=\'friends.html\'", "data-move=\'teachers.html\'", "data-move=\'schedule.html\'", "data-move=\'colors.html\'"]
+    up="home"
+</script>
 
-    <div data-sound="friends_page" data-move="friends.html" class="btn friends_page page_silent" tabindex="3" onfocus="whisper('friends_page', 'friends_w')">Friends
-    </div>
-        <audio id="friends_page" controls style="display:none"><source src="sounds/friends_page.mp3" type="audio/mpeg"></audio>
-        <audio id="friends_w" controls style="display:none"><source src="sounds/friends_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="teachers_page" data-move="teachers.html" class="btn teachers_page page_silent" tabindex="4" onfocus="whisper('teachers_page', 'teachers_w')">Teachers
-    </div>
-        <audio id="teachers_page" controls style="display:none"><source src="sounds/teachers_page.mp3" type="audio/mpeg"></audio>
-        <audio id="teachers_w" controls style="display:none"><source src="sounds/teachers_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="schedule_page" data-move="schedule.html" class="btn schedule_page page_silent" tabindex="5" onfocus="whisper('schedule_page', 'schedule_w')">Schedule
-    </div>
-        <audio id="schedule_page" controls style="display:none"><source src="sounds/schedule_page.mp3" type="audio/mpeg"></audio>
-        <audio id="schedule_w" controls style="display:none"><source src="sounds/schedule_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="colors_page" data-move="colors.html" class="btn colors_page page_silent" tabindex="6" onfocus="whisper('colors_page', 'colors_w')">Colors
-    </div>
-        <audio id="colors_page" controls style="display:none"><source src="sounds/colors_page.mp3" type="audio/mpeg"></audio>
-        <audio id="colors_w" controls style="display:none"><source src="sounds/colors_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
-        <img src="images/up.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
-        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

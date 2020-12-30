@@ -3,34 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Cuisine</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on Cuisine">
-    </div>
-    <div class='btn a Italian' tabindex='2'>Italian</div>
-    <div class='btn b Mexican' tabindex='3'>Mexican</div>
-    <div class='btn c barbeque' tabindex='4'>barbeque</div>
-    <div class='btn d Asian' tabindex='5'>Asian</div>
-    <div class='btn e American' tabindex='6'>American</div>
-    <div class='btn f seafood' tabindex='7'>seafood</div>
- 
-    <a href="javascript:location.replace('food.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
 
-    <audio id='Italian' controls style='display:none'><source src='sounds/Italian.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='Mexican' controls style='display:none'><source src='sounds/Mexican.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='barbeque' controls style='display:none'><source src='sounds/barbeque.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='Asian' controls style='display:none'><source src='sounds/Asian.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='American' controls style='display:none'><source src='sounds/American.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='seafood' controls style='display:none'><source src='sounds/seafood.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, UP (GO BACK TO)****
+    display = ["CUISINE", "Italian", "Mexican", "barbeque", "Asian", "American", "seafood"]
+    sound = ["cuisine_page", "italian", "mexican", "barbeque", "asian", "american", "seafood"]
+    btnclass = ["a", "", "", "", "", "", ""]
+    up="food"
+    nLen = display.length
+    var home_index=nLen+1
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    for (i = 0; i < nLen; i++) {
+        j = i + 1
+        l1='<div data-sound="'+sound[i]+'" class="btn '+btnclass[i]+' '+sound[i]+'" tabindex="'+j+'" onfocus="whisper(\''+sound[i]+'\', \''+sound[i]+'_w\')">'+display[i]+'</div>'
+        l2='<audio id="'+sound[i]+'" controls style="display:none"><source src="sounds/'+sound[i]+'.mp3" type="audio/mpeg"></audio>'
+        l3='<audio id="'+sound[i]+'_w" controls style="display:none"><source src="sounds/'+sound[i]+'_w.mp3" type="audio/mpeg"></audio>'
+        document.write(l1)
+        document.write(l2)
+        document.write(l3)
+    }
+</script>
+
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

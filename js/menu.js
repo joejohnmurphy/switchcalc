@@ -2,7 +2,7 @@ document.write('<ul class="break-column" tabindex=-1>')
 	
 	document.write('<div class="li"><a href="home.html" tabindex="-1"><img src="images/home.jpg"></a></div>')
 	
-	document.write('<div class="li"><a href="index.html" tabindex="-1">Calculator</a></div>')
+	document.write('<div class="li"><a href="numbers.html" tabindex="-1">Numbers</a></div>')
   	
   	document.write('<div class="li dropdown">')
     	document.write('<a href="school.html" class="dropbtn" tabindex="-1">School</a>')

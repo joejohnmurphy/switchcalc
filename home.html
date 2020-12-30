@@ -1,67 +1,31 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Home</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="home_page" data-move="home.html" class="btn a home_page page_silent" tabindex="1" onfocus="whisper('home_page', 'home_page')">
-        <img src="images/home.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="school_page" data-move="school.html" class="btn school_page page_silent" tabindex="2" onfocus="whisper('school_page', 'school_w')">School
-    </div>
-        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
-        <audio id="school_w" controls style="display:none"><source src="sounds/school_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["HOME", "School", "Numbers", "Social", "Feelings", "I want", "I need", "About me", "Family", "Food"]
+    sound = ["home_page", "school", "numbers", "social", "feelings", "want", "need", "about", "family", "food"]
+    btnclass = ["a", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent"]
+    move = ["", "data-move=\'school.html\'", "data-move=\'numbers.html\'", "data-move=\'social.html\'", "data-move=\'feelings.html\'", "data-move=\'want.html\'", "data-move=\'need.html\'", "data-move=\'about.html\'", "data-move=\'family.html\'", "data-move=\'food.html\'"]
+    up="home"
+</script>
 
-    <div data-sound="calculator_page" data-move="index.html" class="btn calculator_page page_silent" tabindex="3" onfocus="whisper('calculator_page', 'calculator_w')">Calculator
-    </div>
-        <audio id="calculator_page" controls style="display:none"><source src="sounds/calculator_page.mp3" type="audio/mpeg"></audio>
-        <audio id="calculator_w" controls style="display:none"><source src="sounds/calculator_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="social_page" data-move="social.html" class="btn social_page page_silent" tabindex="4" onfocus="whisper('social_page', 'social_w')">Social
-    </div>
-        <audio id="social_page" controls style="display:none"><source src="sounds/social_page.mp3" type="audio/mpeg"></audio>
-        <audio id="social_w" controls style="display:none"><source src="sounds/social_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="feelings_page" data-move="feelings.html" class="btn feelings_page page_silent" tabindex="5" onfocus="whisper('feelings_page', 'feelings_w')">Feelings
-    </div>
-        <audio id="feelings_page" controls style="display:none"><source src="sounds/feelings_page.mp3" type="audio/mpeg"></audio>
-        <audio id="feelings_w" controls style="display:none"><source src="sounds/feelings_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="want_page" data-move="want.html" class="btn want_page page_silent" tabindex="5" onfocus="whisper('want_page', 'want_w')">I want
-    </div>
-        <audio id="want_page" controls style="display:none"><source src="sounds/want_page.mp3" type="audio/mpeg"></audio>
-        <audio id="want_w" controls style="display:none"><source src="sounds/want_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="need_page" data-move="need.html" class="btn need_page page_silent" tabindex="6" onfocus="whisper('need_page', 'need_w')">I need
-    </div>
-        <audio id="need_page" controls style="display:none"><source src="sounds/need_page.mp3" type="audio/mpeg"></audio>
-        <audio id="need_w" controls style="display:none"><source src="sounds/need_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="about_page" data-move="about.html" class="btn about_page page_silent" tabindex="7" onfocus="whisper('about_page', 'about_w')">About me
-    </div>
-        <audio id="about_page" controls style="display:none"><source src="sounds/about_page.mp3" type="audio/mpeg"></audio>
-        <audio id="about_w" controls style="display:none"><source src="sounds/about_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="family_page" data-move="family.html" class="btn family_page page_silent" tabindex="8" onfocus="whisper('family_page', 'family_w')">Family
-    </div>
-        <audio id="family_page" controls style="display:none"><source src="sounds/family_page.mp3" type="audio/mpeg"></audio>
-        <audio id="family_w" controls style="display:none"><source src="sounds/family_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="food_page" data-move="food.html" class="btn back food_page page_silent" tabindex="0" onfocus="whisper('food_page', 'food_w')">Food
-    </div>
-        <audio id="food_page" controls style="display:none"><source src="sounds/food_page.mp3" type="audio/mpeg"></audio>
-        <audio id="food_w" controls style="display:none"><source src="sounds/food_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

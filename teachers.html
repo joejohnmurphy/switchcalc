@@ -3,76 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Teachers</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="teachers_page" data-move="teachers.html" class="btn a teachers_page page_silent" tabindex="1" onfocus="whisper('teachers_page', 'teachers_page')">TEACHERS
-    </div>
-        <audio id="teachers_page" controls style="display:none"><source src="sounds/teachers_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="mcclellan" data-move="home.html" class="btn mcclellan page move" tabindex="2" onfocus="whisper('mcclellan', 'mcclellan_w')">Mrs. McClellan
-    </div>
-        <audio id="mcclellan" controls style="display:none"><source src="sounds/mcclellan.mp3" type="audio/mpeg"></audio>
-        <audio id="mcclellan_w" controls style="display:none"><source src="sounds/mcclellan_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["TEACHERS", "Mrs. McClellan", "Mrs. Rodriguez", "Ms. Gannon", "Mrs. Biz", "Mrs. Clark", "Mrs. Palmer", "Mrs. Springstroh", "Mr. Cassens", "Mrs. Schallmoser", "Mr. E"]
+    sound = ["teachers_page", "mcclellan", "rodriguez", "gannon", "biz", "clark", "palmer" "springstroh", "cassens", "schallmoser", "mr_e"]
+    btnclass = ["a", "page", "page", "page", "page", "page","page", "page", "page", "page", "page"]
+    move = ["",  "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'", "data-move=\'home.html\'"]
+    up="school"
+</script>
 
-    <div data-sound="rodriguez" data-move="home.html" class="btn rodriguez page move" tabindex="3" onfocus="whisper('rodriguez', 'rodriguez_w')">Mrs. Rodriguez
-    </div>
-        <audio id="rodriguez" controls style="display:none"><source src="sounds/rodriguez.mp3" type="audio/mpeg"></audio>
-        <audio id="rodriguez_w" controls style="display:none"><source src="sounds/rodriguez_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="gannon" data-move="home.html" class="btn gannon page move" tabindex="4" onfocus="whisper('gannon', 'gannon_w')">Ms. Gannon
-    </div>
-        <audio id="gannon" controls style="display:none"><source src="sounds/gannon.mp3" type="audio/mpeg"></audio>
-        <audio id="gannon_w" controls style="display:none"><source src="sounds/gannon_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="biz" data-move="home.html" class="btn biz page move" tabindex="5" onfocus="whisper('biz', 'biz_w')">Mrs. Biz
-    </div>
-        <audio id="biz" controls style="display:none"><source src="sounds/biz.mp3" type="audio/mpeg"></audio>
-        <audio id="biz_w" controls style="display:none"><source src="sounds/biz_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="springstroh" data-move="home.html" class="btn springstroh page move" tabindex="6" onfocus="whisper('springstroh', 'springstroh_w')">Mrs. Springstroh
-    </div>
-        <audio id="springstroh" controls style="display:none"><source src="sounds/springstroh.mp3" type="audio/mpeg"></audio>
-        <audio id="springstroh_w" controls style="display:none"><source src="sounds/springstroh_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="cassens" data-move="home.html" class="btn cassens page move" tabindex="7" onfocus="whisper('cassens', 'cassens_w')">Mr. Cassens
-    </div>
-        <audio id="cassens" controls style="display:none"><source src="sounds/cassens.mp3" type="audio/mpeg"></audio>
-        <audio id="cassens_w" controls style="display:none"><source src="sounds/cassens_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="craig" data-move="home.html" class="btn craig page move" tabindex="8" onfocus="whisper('craig', 'craig_w')">Mrs. Craig
-    </div>
-        <audio id="craig" controls style="display:none"><source src="sounds/craig.mp3" type="audio/mpeg"></audio>
-        <audio id="craig_w" controls style="display:none"><source src="sounds/craig_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="schallmoser" data-move="home.html" class="btn schallmoser page move" tabindex="9" onfocus="whisper('schallmoser', 'schallmoser_w')">Mrs. Schallmoser
-    </div>
-        <audio id="schallmoser" controls style="display:none"><source src="sounds/schallmoser.mp3" type="audio/mpeg"></audio>
-        <audio id="schallmoser_w" controls style="display:none"><source src="sounds/schallmoser_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="mr_e" data-move="home.html" class="btn mr_e page move" tabindex="10" onfocus="whisper('mr_e', 'mr_e_w')">Mr. E
-    </div>
-        <audio id="mr_e" controls style="display:none"><source src="sounds/mr_e.mp3" type="audio/mpeg"></audio>
-        <audio id="mr_e_w" controls style="display:none"><source src="sounds/mr_e_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="11" onfocus="whisper('home_page', 'home_w')">
-        <img src="images/home.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
-        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="school_page" data-move="school.html" class="btn back school_page page_silent" tabindex="0" onfocus="whisper('school_page', 'school_back_w')">
-        <img src="images/up.jpg">
-    </div>
-        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
-        <audio id="school_back_w" controls style="display:none"><source src="sounds/school_back_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

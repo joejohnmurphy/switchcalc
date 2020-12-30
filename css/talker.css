@@ -44,12 +44,12 @@ body {
     color: black;
 }
 
-.page, .page_silent{
-    color: #33FF00;
+.page{
+    color: #33FFFF;
 }
 
-.move{
-    color: #33FFFF;
+.page_silent{
+    color: #33FF00;
 }
 
 .a{
@@ -61,6 +61,7 @@ body {
   flex-basis: 100%;
   width: 0;
 }
+
 /*Navbar*/
 ul {
   list-style-type: none;

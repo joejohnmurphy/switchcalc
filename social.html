@@ -3,55 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Social</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="social_page" data-move="social.html" class="btn a social_page page_silent" tabindex="1" onfocus="whisper('social_page', 'social_page')">SOCIAL
-    </div>
-        <audio id="social_page" controls style="display:none"><source src="sounds/social_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="hello" class="btn hello" tabindex="2" onfocus="whisper('hello', 'hello_w')">Hello</div>
-        <audio id="hello" controls style="display:none"><source src="sounds/hello.mp3" type="audio/mpeg"></audio>
-        <audio id="hello_w" controls style="display:none"><source src="sounds/hello_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["SOCIAL", "hello", "goodbye", "Questions", "Comments", "daily share", "weekend share", "what I did at school"]
+    sound = ["social_page", "hello", "goodbye", "questions", "comments", "daily", "weekend", "school"]
+    btnclass = ["a", "", "", "page", "page_silent", "", "", ""]
+    move = ["", "", "", "data-move=\'questions.html\'", "data-move=\'comments.html\'", "", "", ""]
+    up="home"
+</script>
 
-    <div data-sound="goodbye" class="btn goodbye" tabindex="3" onfocus="whisper('goodbye', 'goodbye_w')">Goodbye</div>
-        <audio id="goodbye" controls style="display:none"><source src="sounds/goodbye.mp3" type="audio/mpeg"></audio>
-        <audio id="goodbye_w" controls style="display:none"><source src="sounds/goodbye_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="questions_page" data-move="questions.html" class="btn questions_page page" tabindex="4" onfocus="whisper('questions_page', 'questions_w')">Questions
-    </div>
-        <audio id="questions_page" controls style="display:none"><source src="sounds/questions_page.mp3" type="audio/mpeg"></audio>
-        <audio id="questions_w" controls style="display:none"><source src="sounds/questions_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="comments_page" data-move="comments.html" class="btn comments_page page_silent" tabindex="5" onfocus="whisper('comments_page', 'comments_w')">Comments
-    </div>
-        <audio id="comments_page" controls style="display:none"><source src="sounds/comments_page.mp3" type="audio/mpeg"></audio>
-        <audio id="comments_w" controls style="display:none"><source src="sounds/comments_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="daily" class="btn daily" tabindex="6" onfocus="whisper('daily', 'daily_w')">Daily share</div>
-        <audio id="daily" controls style="display:none"><source src="sounds/daily.mp3" type="audio/mpeg"></audio>
-        <audio id="daily_w" controls style="display:none"><source src="sounds/daily_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="weekend" class="btn weekend" tabindex="7" onfocus="whisper('weekend', 'weekend_w')">Weekend share</div>
-        <audio id="weekend" controls style="display:none"><source src="sounds/weekend.mp3" type="audio/mpeg"></audio>
-        <audio id="weekend_w" controls style="display:none"><source src="sounds/weekend_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="did_at_school" class="btn did_at_school" tabindex="8" onfocus="whisper('did_at_school', 'did_at_school_w')">What I did at school</div>
-        <audio id="did_at_school" controls style="display:none"><source src="sounds/did_at_school.mp3" type="audio/mpeg"></audio>
-        <audio id="did_at_school_w" controls style="display:none"><source src="sounds/did_at_school_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
-        <img src="images/up.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
-        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

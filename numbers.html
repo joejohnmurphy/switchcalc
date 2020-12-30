@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
+<body>
+
+<script language="JavaScript" type="text/javascript">
+    var names="numbers";
+    var line1='<div data-sound="'+names+'_page" data-move="'+names+'.html" class="btn a '+names+'_page page_silent" tabindex="1" onfocus="whisper(\''+names+'_page\', \''+names+'_page\')">NUMBERS</div>'
+    var line2='<audio id="'+names+'_page" controls style="display:none"><source src="sounds/'+names+'_page.mp3" type="audio/mpeg"></audio>'
+    document.write(line1)
+    document.write(line2)
+
+    for (h = 0; h < 100; h += 10) {
+        homeindex = h + 11;
+        document.write('<div class=break-columns><div>')        
+        for (i = h; i < h + 10; i++) {
+            j = i+2;
+            var line2='<div data-sound="'+i+'" class="btn number '+i+'" tabindex="'+j+'" onfocus="whisper(\''+i+'\', \''+i+'_w\')">'+i+'</div>';
+            var line3='<audio id="'+i+'" controls style="display:none"><source src="sounds/'+i+'.mp3" type="audio/mpeg"></audio>';
+            var line4='<audio id="'+i+'_w" controls style="display:none"><source src="sounds/'+i+'_w.mp3" type="audio/mpeg"></audio>';
+            document.write(line2)
+            document.write(line3)
+            document.write(line4)
+        }
+        document.write('<div data-sound="home_page" data-move="home.html" class="btn numbersback back home_page page_silent" tabindex="'+homeindex+'" onfocus="whisper(\'home_page\', \'home_w\')"><img src="images/home.jpg"></div><audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio><audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>')
+} 
+
+</script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>

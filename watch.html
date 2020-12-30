@@ -3,38 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Watch</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on Watch Something">
-    </div>
-    <div class="btn a test_kitchen" tabindex="2">America's Test Kitchen</div>
-    <div class="btn b cooks_country" tabindex="3">Cook's Country</div>
-    <div class="btn c simply_ming" tabindex="4">Simply Ming</div>
-    <div class="btn d jacques_pepin" tabindex="5">Jacques Pepin</div>
-    <div class="btn e primal_grill" tabindex="6">Primal Grill</div>
-    <div class="btn f chefs_life" tabindex="7">A Chef's Life</div>
-    <div class="btn g milk_street" tabindex="8">Milk Street</div>
-    <div class="btn i tessa_show" tabindex="9">Watch a show with Tessa</div>
 
-    <a href="javascript:location.replace('want.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, UP (GO BACK TO)****
+    display = ["WATCH", "America's Test Kitchen", "Cook's Country", "Simply Ming", "Jacques Pepin", "Primal Grill", "Milk Street", "Watch a show with Tessa"]
+    sound = ["watch_page", "test_kitchen", "cooks_country", "simply_ming", "jacques_pepin", "primal_grill", "milk_street", "tessa_show"]
+    btnclass = ["a", "", "", "", "", "", "", ""]
+    up="want"
+    nLen = display.length
+    var home_index=nLen+1
 
-    <audio id="test_kitchen" controls style="display:none"><source src="sounds/test_kitchen.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="cooks_country" controls style="display:none"><source src="sounds/cooks_country.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="simply_ming" controls style="display:none"><source src="sounds/simply_ming.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="jacques_pepin" controls style="display:none"><source src="sounds/jacques_pepin.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="primal_grill" controls style="display:none"><source src="sounds/primal_grill.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="chefs_life" controls style="display:none"><source src="sounds/chefs_life.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="milk_street" controls style="display:none"><source src="sounds/milk_street.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="tessa_show" controls style="display:none"><source src="sounds/tessa_show.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
- 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    for (i = 0; i < nLen; i++) {
+        j = i + 1
+        l1='<div data-sound="'+sound[i]+'" class="btn '+btnclass[i]+' '+sound[i]+'" tabindex="'+j+'" onfocus="whisper(\''+sound[i]+'\', \''+sound[i]+'_w\')">'+display[i]+'</div>'
+        l2='<audio id="'+sound[i]+'" controls style="display:none"><source src="sounds/'+sound[i]+'.mp3" type="audio/mpeg"></audio>'
+        l3='<audio id="'+sound[i]+'_w" controls style="display:none"><source src="sounds/'+sound[i]+'_w.mp3" type="audio/mpeg"></audio>'
+        document.write(l1)
+        document.write(l2)
+        document.write(l3)
+    }
+</script>
+
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

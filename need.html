@@ -3,55 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>I Need</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="need_page" data-move="want.html" class="btn a need_page page_silent" tabindex="1" onfocus="whisper('need_page', 'need_page')">I NEED SOMETHING
-    </div>
-        <audio id="need_page" controls style="display:none"><source src="sounds/need_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="help" class="btn walk" tabindex="2" onfocus="whisper('walk', 'help_w')">I need help</div>
-        <audio id="help" controls style="display:none"><source src="sounds/help.mp3" type="audio/mpeg"></audio>
-        <audio id="help_w" controls style="display:none"><source src="sounds/help_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["I NEED SOMETHING", "I need help", "I need a break", "Something isn't right", "I can't hear", "Turn my switch off", "Move my chair", "Tilt my chair"]
+    sound = ["need_page", "help", "break", "not_right", "I cant_hear", "switch_off", "chair_move", "chair_tilt"]
+    btnclass = ["a", "", "page", "page", "", "", "", ""]
+    move = ["", "", "data-move=\'break.html\'", "data-move=\'not_right.html\'", "", "", "", ""]
+    up="home"
+</script>
 
-    <div data-sound="break" data-move="break.html" class="btn break page" tabindex="3" onfocus="whisper('break', 'break_w')">I need a break
-    </div>
-        <audio id="break" controls style="display:none"><source src="sounds/break.mp3" type="audio/mpeg"></audio>
-        <audio id="break_w" controls style="display:none"><source src="sounds/break_w.mp3" type="audio/mpeg"></audio>
+    <script src="js/main_buttons.js"></script>
 
-    <div data-sound="not_right" data-move="not_right.html" class="btn not_right page" tabindex="4" onfocus="whisper('not_right', 'not_right_w')">Something isn't right
-    </div>
-        <audio id="not_right" controls style="display:none"><source src="sounds/not_right.mp3" type="audio/mpeg"></audio>
-        <audio id="not_right_w" controls style="display:none"><source src="sounds/not_right_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    text='<form action="http://switchcalc.com/text.php" method="post"><input type="submit" name="send" value="Get Mom or Dad" data-sound="send_text" class="btn send_text" tabindex="'+home_index+'" onfocus="whisper(\'send_text\', \'send_text_w\')"><audio id="send_text" controls style="display:none"><source src="sounds/send_text.mp3" type="audio/mpeg"></audio><audio id="send_text_w" controls style="display:none"><source src="sounds/send_text_w.mp3" type="audio/mpeg"></audio></form>'
+    document.write(text)
+    home_index=home_index+1
+</script>
 
-    <div data-sound="cant_hear" class="btn cant_hear" tabindex="5" onfocus="whisper('cant_hear', 'cant_hear_w')">I can't hear</div>
-        <audio id="cant_hear" controls style="display:none"><source src="sounds/cant_hear.mp3" type="audio/mpeg"></audio>
-        <audio id="cant_hear_w" controls style="display:none"><source src="sounds/cant_hear_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="switch_off" class="btn switch_off" tabindex="6" onfocus="whisper('switch_off', 'switch_off_w')">Turn my switch off</div>
-        <audio id="switch_off" controls style="display:none"><source src="sounds/switch_off.mp3" type="audio/mpeg"></audio>
-        <audio id="switch_off_w" controls style="display:none"><source src="sounds/switch_off_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="chair_move" class="btn chair_move" tabindex="7" onfocus="whisper('chair_move', 'chair_move_w')">Move my chair</div>
-        <audio id="chair_move" controls style="display:none"><source src="sounds/chair_move.mp3" type="audio/mpeg"></audio>
-        <audio id="chair_move_w" controls style="display:none"><source src="sounds/chair_move_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="chair_tilt" class="btn chair_tilt" tabindex="8" onfocus="whisper('chair_tilt', 'chair_tilt_w')">Tilt my chair</div>
-        <audio id="chair_tilt" controls style="display:none"><source src="sounds/chair_tilt.mp3" type="audio/mpeg"></audio>
-        <audio id="chair_tilt_w" controls style="display:none"><source src="sounds/chair_tilt_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
-        <img src="images/up.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
-        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

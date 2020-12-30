@@ -3,38 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Lunch and Dinner</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on Lunch and Dinner">
-    </div>
-    <div class='btn a hamburger' tabindex='2'>hamburger</div>
-    <div class='btn b chicken' tabindex='3'>chicken</div>
-    <div class='btn c chips' tabindex='4'>chips</div>
-    <div class='btn d french_fries' tabindex='5'>french fries</div>
-    <div class='btn e pasta' tabindex='6'>pasta</div>
-    <div class='btn f bread' tabindex='7'>bread</div>
-    <div class='btn g salad' tabindex='8'>salad</div>
-    <div class='btn h sandwich' tabindex='9'>sandwich</div>
- 
-    <a href="javascript:location.replace('food.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
-    <audio id='hamburger' controls style='display:none'><source src='sounds/hamburger.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='chicken' controls style='display:none'><source src='sounds/chicken.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='chips' controls style='display:none'><source src='sounds/chips.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='french_fries' controls style='display:none'><source src='sounds/french_fries.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='pasta' controls style='display:none'><source src='sounds/pasta.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='bread' controls style='display:none'><source src='sounds/bread.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='salad' controls style='display:none'><source src='sounds/salad.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='sandwich' controls style='display:none'><source src='sounds/sandwich.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
- 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<body>
+
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, UP (GO BACK TO)****
+    display = ["LUNCH AND DINNER", "hamburger", "chicken", "chips", "French fries", "pasta", "bread", "salad", "sandwich"]
+    sound = ["lunch_page", "hamburger", "chicken", "chips", "french_fries", "pasta", "bread", "salad", "sandwich"]
+    btnclass = ["a", "", "", "", "", "", "", "", ""]
+    up="food"
+    nLen = display.length
+    var home_index=nLen+1
+
+    for (i = 0; i < nLen; i++) {
+        j = i + 1
+        l1='<div data-sound="'+sound[i]+'" class="btn '+btnclass[i]+' '+sound[i]+'" tabindex="'+j+'" onfocus="whisper(\''+sound[i]+'\', \''+sound[i]+'_w\')">'+display[i]+'</div>'
+        l2='<audio id="'+sound[i]+'" controls style="display:none"><source src="sounds/'+sound[i]+'.mp3" type="audio/mpeg"></audio>'
+        l3='<audio id="'+sound[i]+'_w" controls style="display:none"><source src="sounds/'+sound[i]+'_w.mp3" type="audio/mpeg"></audio>'
+        document.write(l1)
+        document.write(l2)
+        document.write(l3)
+    }
+</script>
+
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

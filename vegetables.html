@@ -3,44 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Vegetables</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on Vegetables">
-    </div>
-    <div class='btn a vegetables' tabindex='2'>vegetables</div>
-    <div class='btn b asparagus' tabindex='3'>asparagus</div>
-    <div class='btn c broccoli' tabindex='4'>broccoli</div>
-    <div class='btn d carrot' tabindex='5'>carrot</div>
-    <div class='btn e cauliflower' tabindex='6'>cauliflower</div>
-    <div class='btn f corn' tabindex='7'>corn</div>
-    <div class='btn g green_beans' tabindex='8'>green beans</div>
-    <div class='btn h lettuce' tabindex='9'>lettuce</div>
-    <div class='btn i onions' tabindex='10'>onions</div>
-    <div class='btn j potato' tabindex='11'>potato</div>
-    <div class='btn k tomato' tabindex='12'>tomato</div>
- 
-    <a href="javascript:location.replace('food.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
-    <audio id='vegetables' controls style='display:none'><source src='sounds/vegetables.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='asparagus' controls style='display:none'><source src='sounds/asparagus.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='broccoli' controls style='display:none'><source src='sounds/broccoli.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='carrot' controls style='display:none'><source src='sounds/carrot.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='cauliflower' controls style='display:none'><source src='sounds/cauliflower.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='corn' controls style='display:none'><source src='sounds/corn.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='green_beans' controls style='display:none'><source src='sounds/green_beans.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='lettuce' controls style='display:none'><source src='sounds/lettuce.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='onions' controls style='display:none'><source src='sounds/onions.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='potato' controls style='display:none'><source src='sounds/potato.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
-    <audio id='tomato' controls style='display:none'><source src='sounds/tomato.mp3' type='audio/mpeg'> Your browser does not support the audio element.</audio>
- 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<body>
+
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, UP (GO BACK TO)****
+    display = ["VEGETABLES", "asparagus", "broccoli", "carrot", "cauliflower", "corn", "green beans", "lettuce", "onions", "potato", "tomato"]
+    sound = ["vegetables_page", "asparagus", "broccoli", "carrot", "cauliflower", "corn", "green_beans", "lettuce", "onions", "potato", "tomato"]
+    btnclass = ["a", "", "", "", "", "", "", "", "", "", ""]
+    up="food"
+    nLen = display.length
+    var home_index=nLen+1
+
+    for (i = 0; i < nLen; i++) {
+        j = i + 1
+        l1='<div data-sound="'+sound[i]+'" class="btn '+btnclass[i]+' '+sound[i]+'" tabindex="'+j+'" onfocus="whisper(\''+sound[i]+'\', \''+sound[i]+'_w\')">'+display[i]+'</div>'
+        l2='<audio id="'+sound[i]+'" controls style="display:none"><source src="sounds/'+sound[i]+'.mp3" type="audio/mpeg"></audio>'
+        l3='<audio id="'+sound[i]+'_w" controls style="display:none"><source src="sounds/'+sound[i]+'_w.mp3" type="audio/mpeg"></audio>'
+        document.write(l1)
+        document.write(l2)
+        document.write(l3)
+    }
+</script>
+
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

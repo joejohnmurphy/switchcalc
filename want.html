@@ -3,61 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>I Want</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="want_page" data-move="want.html" class="btn a want_page page_silent" tabindex="1" onfocus="whisper('want_page', 'want_page')">I WANT TO...
-    </div>
-        <audio id="want_page" controls style="display:none"><source src="sounds/want_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="eat" data-move="food.html" class="btn eat page" tabindex="2" onfocus="whisper('eat', 'eat_w')">eat
-    </div>
-        <audio id="eat" controls style="display:none"><source src="sounds/eat.mp3" type="audio/mpeg"></audio>
-        <audio id="eat_w" controls style="display:none"><source src="sounds/eat_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["I WANT TO...", "eat", "drink", "watch something", "take a walk", "play catch", "talk on the phone", "listen to an audiobook", "play tetherball"]
+    sound = ["want_page", "eat", "drink", "watch", "walk", "catch", "phone_call", "audiobook", "tetherball"]
+    btnclass = ["a", "page", "page", "page", "", "", "page", "", ""]
+    move = ["", "data-move=\'food.html\'", "data-move=\'drinks.html\'", "data-move=\'watch.html\'", "", "", "data-move=\'family.html\'", "", "", ""]
+    up="home"
+</script>
 
-    <div data-sound="drink" data-move="drinks.html" class="btn drink page" tabindex="3" onfocus="whisper('drink', 'drink_w')">drink
-    </div>
-        <audio id="drink" controls style="display:none"><source src="sounds/drink.mp3" type="audio/mpeg"></audio>
-        <audio id="drink_w" controls style="display:none"><source src="sounds/drink_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="watch" data-move="watch.html" class="btn watch page" tabindex="4" onfocus="whisper('watch', 'watch_w')">watch something
-    </div>
-        <audio id="watch" controls style="display:none"><source src="sounds/watch.mp3" type="audio/mpeg"></audio>
-        <audio id="watch_w" controls style="display:none"><source src="sounds/watch_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="walk" class="btn walk" tabindex="5" onfocus="whisper('walk', 'walk_w')">take a walk</div>
-        <audio id="walk" controls style="display:none"><source src="sounds/walk.mp3" type="audio/mpeg"></audio>
-        <audio id="walk_w" controls style="display:none"><source src="sounds/walk_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="catch" class="btn catch" tabindex="6" onfocus="whisper('catch', 'catch_w')">play catch</div>
-        <audio id="catch" controls style="display:none"><source src="sounds/catch.mp3" type="audio/mpeg"></audio>
-        <audio id="catch_w" controls style="display:none"><source src="sounds/catch_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="phone_call" data-move="family.html" class="btn phone_call page" tabindex="7" onfocus="whisper('phone_call', 'phone_call_w')">talk on the phone
-    </div>
-        <audio id="phone_call" controls style="display:none"><source src="sounds/phone_call.mp3" type="audio/mpeg"></audio>
-        <audio id="phone_call_w" controls style="display:none"><source src="sounds/phone_call_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="audiobook" class="btn audiobook" tabindex="8" onfocus="whisper('audiobook', 'audiobook_w')">listen to an audiobook</div>
-        <audio id="audiobook" controls style="display:none"><source src="sounds/audiobook.mp3" type="audio/mpeg"></audio>
-        <audio id="audiobook_w" controls style="display:none"><source src="sounds/audiobook_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="tetherball" class="btn tetherball" tabindex="9" onfocus="whisper('tetherball', 'tetherball_w')">play tetherball</div>
-        <audio id="tetherball" controls style="display:none"><source src="sounds/tetherball.mp3" type="audio/mpeg"></audio>
-        <audio id="tetherball_w" controls style="display:none"><source src="sounds/tetherball_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
-        <img src="images/up.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
-        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

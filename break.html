@@ -3,26 +3,51 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>I Want</title>
+    <title>Break</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
 <body>
-    <div class="info" tabindex="1">
-        <img src="images/info.jpg" alt="You are on Break">
+
+<script language="JavaScript" type="text/javascript">
+    var names="break";
+    var line1='<div data-sound="'+names+'_page" data-move="'+names+'.html" class="btn a '+names+'_page page_silent" tabindex="1" onfocus="whisper(\''+names+'_page\', \''+names+'_page\')">BREAK</div>'
+    var line2='<audio id="'+names+'_page" controls style="display:none"><source src="sounds/'+names+'_page.mp3" type="audio/mpeg"></audio>'
+    document.write(line1)
+    document.write(line2)
+
+    var names, display, i;
+    names = ["rest", "walk", "switch_off"];
+    display = ["I want to rest", "I want to take a walk", "I want my head switch off"];
+    nLen = names.length;
+    for (i = 0; i < nLen; i++) {
+        j = i + 2;
+        var line1='<div data-sound="'+names[i]+'" class="btn '+names[i]+'" tabindex="'+j+'" onfocus="whisper(\''+names[i]+'\', \''+names[i]+'_w\')">'+display[i]+'</div>'
+        var line2='<audio id="'+names[i]+'" controls style="display:none"><source src="sounds/'+names[i]+'.mp3" type="audio/mpeg"></audio>'
+        var line3='<audio id="'+names[i]+'_w" controls style="display:none"><source src="sounds/'+names[i]+'_w.mp3" type="audio/mpeg"></audio>'
+        document.write(line1)
+        document.write(line2)
+        document.write(line3)
+    }
+</script>
+
+    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="5" onfocus="whisper('home_page', 'home_w')">
+        <img src="images/home.jpg">
     </div>
-    <div class="btn a rest" tabindex="2">I want to rest</div>
-    <div class="btn b walk" tabindex="3">I want to take a walk</div>
-    <div class="btn c switch" tabindex="4">I want my head switch off</div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
 
-    <a href="javascript:location.replace('want.html')" class="btn up" tabindex="0">
-        <img src="images/up.jpg" alt="Go back to the last page">
-    </a>
 
-    <audio id="rest" controls style="display:none"><source src="sounds/rest.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="walk" controls style="display:none"><source src="sounds/walk.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
-    <audio id="switch" controls style="display:none"><source src="sounds/switch.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
- 
+<script language="JavaScript" type="text/javascript">
+    var names="need";
+    var line1='<div data-sound="'+names+'_page" data-move="'+names+'.html" class="btn back '+names+'_page page_silent" tabindex="0" onfocus="whisper(\''+names+'_page\', \''+names+'_back_w\')"><img src="images/up.jpg"></div>';
+    var line2='<audio id="'+names+'_page" controls style="display:none"><source src="sounds/'+names+'_page.mp3" type="audio/mpeg"></audio><audio id="'+names+'_back_w" controls style="display:none"><source src="sounds/'+names+'_back_w.mp3" type="audio/mpeg"></audio>';
+    document.write(line1)
+    document.write(line2)
+</script>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>
 </body>

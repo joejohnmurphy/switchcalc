@@ -32,7 +32,6 @@ $('.a').focus();
                     if ($(':focus').hasClass('a')) {
                         document.getElementById(soundId).volume = 0.2;
                         document.getElementById(soundId).play();
-                        setTimeout(function() {window.location.href=moveId;}, 1500)
                     } else if ($(':focus').hasClass('page_silent')) {
                         window.location.href=moveId;
                     } else if ($(':focus').hasClass('page')) {
@@ -48,8 +47,15 @@ $('.a').focus();
             // to the first tabindex instead of URL bar
             if (evt.keyCode == 9) {
                 fired = true;
-
-                if ($(':focus').hasClass('back')) {
+                //special for Numbers page
+                if ($(':focus').hasClass('numbersback')) {
+                    evt.preventDefault();
+                    var currentEle = $(':focus');
+                    var currentIndex = $(currentEle).attr('tabindex');
+                    currentIndex = parseInt(currentIndex);
+                    nextIndex = currentIndex - 9;
+                    $('[tabindex='+nextIndex+']').focus();
+                } else if ($(':focus').hasClass('back')) {
                     evt.preventDefault();
                     $('.a').focus();
                 }
@@ -67,7 +73,17 @@ $('.a').focus();
                 currentIndex = parseInt(currentIndex);
                 //if we have an integer tabindex above 1 get the previous item
                 if(currentIndex > 1) {
-                    nextIndex = currentIndex - 1;
+                //special for Numbers page
+                if ($(':focus').hasClass('numbersback')) {
+                    nextIndex = currentIndex + 1;
+                //special for Numbers page
+                } else if ($(':focus').hasClass('number')) {
+                    if(currentIndex > 91) {
+                        location.reload();
+                    } else {
+                        nextIndex = Math.ceil((currentIndex-1) / 10) * 10 + 2;
+                    }
+                } else {nextIndex = currentIndex - 1;}
                     //console.log('nextIndex: '+nextIndex);
                     $('[tabindex='+nextIndex+']').focus();
                 } else if(currentIndex == 1) {
@@ -89,8 +105,6 @@ $('.a').focus();
         } else {
             return false;
         }
-
-
     });
 
     // A key has gone up, so now accept events again
