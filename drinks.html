@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
 
@@ -17,21 +17,11 @@
     display = ["DRINKS", "water", "apple juice", "chocolate milk", "fruit punch", "kool aid", "lemonade", "milk", "milkshake", "orange juice", "soda"]
     sound = ["drinks_page", "water", "apple_juice", "chocolate_milk", "fruit_punch", "kool_aid", "lemonade", "milk", "milkshake", "orange_juice", "soda"]
     btnclass = ["a", "", "", "", "", "", "", "", "", "", ""]
-    up="want"
-    nLen = display.length
-    var home_index=nLen+1
-
-    for (i = 0; i < nLen; i++) {
-        j = i + 1
-        l1='<div data-sound="'+sound[i]+'" class="btn '+btnclass[i]+' '+sound[i]+'" tabindex="'+j+'" onfocus="whisper(\''+sound[i]+'\', \''+sound[i]+'_w\')">'+display[i]+'</div>'
-        l2='<audio id="'+sound[i]+'" controls style="display:none"><source src="sounds/'+sound[i]+'.mp3" type="audio/mpeg"></audio>'
-        l3='<audio id="'+sound[i]+'_w" controls style="display:none"><source src="sounds/'+sound[i]+'_w.mp3" type="audio/mpeg"></audio>'
-        document.write(l1)
-        document.write(l2)
-        document.write(l3)
-    }
+    move = ["", "", "", "", "", "", "", "", "", "", ""]
+    up="food"
 </script>
 
+    <script src="js/main_buttons.js"></script>
     <script src="js/back_buttons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>

@@ -3,71 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Cooking</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="cooking_page" data-move="cooking.html" class="btn a cooking_page page_silent" tabindex="1" onfocus="whisper('cooking_page', 'cooking_page')">COOKING
-    </div>
-        <audio id="cooking_page" controls style="display:none"><source src="sounds/cooking_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="step_1" class="btn step_1" tabindex="2" onfocus="whisper('step_1', 'step_1_w')">Get tools</div>
-        <audio id="step_1" controls style="display:none"><source src="sounds/step_1.mp3" type="audio/mpeg"></audio>
-        <audio id="step_1_w" controls style="display:none"><source src="sounds/step_1_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["COOKING", "1. Get tools", "2. Get ingredients", "3. Fill pan with water", "4. Heat stove", "5. Put in pasta", "6. Set timer", "7. Stir pasta", "8. Scoop out one piece of pasta", "9. Test for firmness", "10. Turn the burner off", "11. Strain the pasta", "12. Pour sauce in pan", "13. Heat the sauce", "14. Turn off burner", "15. Put pasta on plate", "16. Put sauce on pasta", "17. Enjoy"]
+    sound = ["cooking_page", "step_1", "step_2", "step_3", "step_4", "step_5", "step_6", "step_7", "step_8", "step_9", "step_10", "step_11", "step_12", "step_13", "step_14", "step_15", "step_16", "step_17"]
+    btnclass = ["a", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    move = ["",  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    up="schedule"
+</script>
 
-    <div data-sound="step_2" class="btn step_2" tabindex="3" onfocus="whisper('step_2', 'step_2_w')">Pre-heat</div>
-        <audio id="step_2" controls style="display:none"><source src="sounds/step_2.mp3" type="audio/mpeg"></audio>
-        <audio id="step_2_w" controls style="display:none"><source src="sounds/step_2_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_3" class="btn step_3" tabindex="4" onfocus="whisper('step_3', 'step_3_w')">Brownie mix</div>
-        <audio id="step_3" controls style="display:none"><source src="sounds/step_3.mp3" type="audio/mpeg"></audio>
-        <audio id="step_3_w" controls style="display:none"><source src="sounds/step_3_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_4" class="btn step_4" tabindex="5" onfocus="whisper('step_4', 'step_4_w')">Prep bowl</div>
-        <audio id="step_4" controls style="display:none"><source src="sounds/step_4.mp3" type="audio/mpeg"></audio>
-        <audio id="step_4_w" controls style="display:none"><source src="sounds/step_4_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_5" class="btn step_5" tabindex="6" onfocus="whisper('step_5', 'step_5_w')">Mix</div>
-        <audio id="step_5" controls style="display:none"><source src="sounds/step_5.mp3" type="audio/mpeg"></audio>
-        <audio id="step_5_w" controls style="display:none"><source src="sounds/step_5_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_6" class="btn step_6" tabindex="7" onfocus="whisper('step_6', 'step_6_w')">Grease pan</div>
-        <audio id="step_6" controls style="display:none"><source src="sounds/step_6.mp3" type="audio/mpeg"></audio>
-        <audio id="step_6_w" controls style="display:none"><source src="sounds/step_6_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_7" class="btn step_7" tabindex="8" onfocus="whisper('step_7', 'step_7_w')">Fill pan</div>
-        <audio id="step_7" controls style="display:none"><source src="sounds/step_7.mp3" type="audio/mpeg"></audio>
-        <audio id="step_7_w" controls style="display:none"><source src="sounds/step_7_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_8" class="btn step_8" tabindex="9" onfocus="whisper('step_8', 'step_8_w')">Bake brownies</div>
-        <audio id="step_8" controls style="display:none"><source src="sounds/step_8.mp3" type="audio/mpeg"></audio>
-        <audio id="step_8_w" controls style="display:none"><source src="sounds/step_8_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_9" class="btn step_9" tabindex="10" onfocus="whisper('step_9', 'step_9_w')">Cool</div>
-        <audio id="step_9" controls style="display:none"><source src="sounds/step_9.mp3" type="audio/mpeg"></audio>
-        <audio id="step_9_w" controls style="display:none"><source src="sounds/step_9_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="step_10" class="btn step_10" tabindex="11" onfocus="whisper('step_10', 'step_10_w')">Enjoy!</div>
-        <audio id="step_10" controls style="display:none"><source src="sounds/step_10.mp3" type="audio/mpeg"></audio>
-        <audio id="step_10_w" controls style="display:none"><source src="sounds/step_10_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="11" onfocus="whisper('home_page', 'home_w')">
-        <img src="images/home.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
-        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="school_page" data-move="school.html" class="btn back school_page page_silent" tabindex="0" onfocus="whisper('school_page', 'school_back_w')">
-        <img src="images/up.jpg">
-    </div>
-        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
-        <audio id="school_back_w" controls style="display:none"><source src="sounds/school_back_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>
