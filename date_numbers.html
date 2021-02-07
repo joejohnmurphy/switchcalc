@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date Numbers</title>
+    <link rel="stylesheet" href="css/talker.css">
+</head>
+
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+
+<body>
+
+<script language="JavaScript" type="text/javascript">
+    var names="numbers";
+    var line1='<div data-sound="'+names+'_page" data-move="'+names+'.html" class="btn a '+names+'_page page_silent" tabindex="1" onfocus="whisper(\''+names+'_page\', \''+names+'_page\')">DATE NUMBERS</div>'
+    var line2='<audio id="'+names+'_page" controls style="display:none"><source src="sounds/'+names+'_page.mp3" type="audio/mpeg"></audio>'
+    document.write(line1)
+    document.write(line2)
+
+    for (h = 0; h < 40; h += 10) {
+        homeindex = h + 11;
+        document.write('<div class=break-columns><div>')        
+        for (i = h; i < h + 10; i++) {
+            j = i+2;
+            var line2='<div data-sound="'+i+'" class="btn date_number '+i+'" tabindex="'+j+'" onfocus="whisper(\''+i+'\', \''+i+'_w\')">'+i+'</div>';
+            var line3='<audio id="'+i+'" controls style="display:none"><source src="sounds/'+i+'.mp3" type="audio/mpeg"></audio>';
+            var line4='<audio id="'+i+'_w" controls style="display:none"><source src="sounds/'+i+'_w.mp3" type="audio/mpeg"></audio>';
+            document.write(line2)
+            document.write(line3)
+            document.write(line4)
+        }
+        document.write('<div data-sound="morning_meeting_back_w" data-move="morning_meeting.html" class="btn numbersback back morning_meeting_back_w page_silent" tabindex="'+homeindex+'" onfocus="whisper(\'morning_meeting_back_w\', \'morning_meeting_back_w\')"><img src="images/up.jpg"></div><audio id="morning_meeting_back_w" controls style="display:none"><source src="sounds/morning_meeting_back_w.mp3" type="audio/mpeg"></audio><audio id="morning_meeting_back_w" controls style="display:none"><source src="sounds/morning_meeting_back_w.mp3" type="audio/mpeg"></audio>')
+} 
+
+</script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/talker.js"></script>
+</body>
+
+</html>

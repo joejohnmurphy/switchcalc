@@ -83,6 +83,13 @@ $('.a').focus();
                     } else {
                         nextIndex = Math.ceil((currentIndex-1) / 10) * 10 + 2;
                     }
+                //special for Date Numbers page
+                } else if ($(':focus').hasClass('date_number')) {
+                    if(currentIndex > 31) {
+                        location.reload();
+                    } else {
+                        nextIndex = Math.ceil((currentIndex-1) / 10) * 10 + 2;
+                    }
                 } else {nextIndex = currentIndex - 1;}
                     //console.log('nextIndex: '+nextIndex);
                     $('[tabindex='+nextIndex+']').focus();
