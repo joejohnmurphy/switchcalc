@@ -3,75 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--****ENTER PAGE TITLE****-->
     <title>Food</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
+<script src = "js/menu.js"></script>
 
 <body>
-    <div data-sound="food_page" data-move="food.html" class="btn a food_page page_silent" tabindex="1" onfocus="whisper('food_page', 'food_page')">FOOD
-    </div>
-        <audio id="food_page" controls style="display:none"><source src="sounds/food_page.mp3" type="audio/mpeg"></audio>
 
-    <div data-sound="breakfast_page" data-move="breakfast.html" class="btn breakfast_page page_silent" tabindex="2" onfocus="whisper('breakfast_page', 'breakfast_w')">Breakfast
-    </div>
-        <audio id="breakfast_page" controls style="display:none"><source src="sounds/breakfast_page.mp3" type="audio/mpeg"></audio>
-        <audio id="breakfast_w" controls style="display:none"><source src="sounds/breakfast_w.mp3" type="audio/mpeg"></audio>
+<script language="JavaScript" type="text/javascript">
+    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
+    display = ["FOOD", "Favorite Foods", "Breakfast", "Snacks", "Lunch and Dinner", "Fruits", "Meats", "Vegetables", "Condiments", "Desserts", "Drinks", "Cuisine"]
+    sound = ["school_page", "favorite_foods", "breakfast", "snacks", "lunch", "fruits", "meats", "vegetables", "condiments", "desserts", "drinks", "cuisine"]
+    btnclass = ["a", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent", "page_silent"]
+    move = ["", "data-move=\'favorite_foods.html\'", "data-move=\'breakfast.html\'", "data-move=\'snacks.html\'", "data-move=\'lunch.html\'", "data-move=\'fruits.html\'", "data-move=\'meats.html\'", "data-move=\'vegetables.html\'", "data-move=\'condiments.html\'", "data-move=\'desserts.html\'", "data-move=\'drinks.html\'", "data-move=\'cuisine.html\'"]
+    up="home"
+</script>
 
-    <div data-sound="snacks_page" data-move="snacks.html" class="btn snacks_page page_silent" tabindex="3" onfocus="whisper('snacks_page', 'snacks_w')">Snacks
-    </div>
-        <audio id="snacks_page" controls style="display:none"><source src="sounds/snacks_page.mp3" type="audio/mpeg"></audio>
-        <audio id="snacks_w" controls style="display:none"><source src="sounds/snacks_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="lunch_page" data-move="lunch.html" class="btn lunch_page page_silent" tabindex="4" onfocus="whisper('lunch_page', 'lunch_w')">Lunch and dinner
-    </div>
-        <audio id="lunch_page" controls style="display:none"><source src="sounds/lunch_page.mp3" type="audio/mpeg"></audio>
-        <audio id="lunch_w" controls style="display:none"><source src="sounds/lunch_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="fruits_page" data-move="fruits.html" class="btn fruits_page page_silent" tabindex="5" onfocus="whisper('fruits_page', 'fruits_w')">Fruits
-    </div>
-        <audio id="fruits_page" controls style="display:none"><source src="sounds/fruits_page.mp3" type="audio/mpeg"></audio>
-        <audio id="fruits_w" controls style="display:none"><source src="sounds/fruits_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="meats_page" data-move="meats.html" class="btn meats_page page_silent" tabindex="6" onfocus="whisper('meats_page', 'meats_w')">Meats
-    </div>
-        <audio id="meats_page" controls style="display:none"><source src="sounds/meats_page.mp3" type="audio/mpeg"></audio>
-        <audio id="meats_w" controls style="display:none"><source src="sounds/meats_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="vegetables_page" data-move="vegetables.html" class="btn vegetables_page page_silent" tabindex="7" onfocus="whisper('vegetables_page', 'vegetables_w')">Vegetables
-    </div>
-        <audio id="vegetables_page" controls style="display:none"><source src="sounds/vegetables_page.mp3" type="audio/mpeg"></audio>
-        <audio id="vegetables_w" controls style="display:none"><source src="sounds/vegetables_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="condiments_page" data-move="condiments.html" class="btn condiments_page page_silent" tabindex="8" onfocus="whisper('condiments_page', 'condiments_w')">Condiments
-    </div>
-        <audio id="condiments_page" controls style="display:none"><source src="sounds/condiments_page.mp3" type="audio/mpeg"></audio>
-        <audio id="condiments_w" controls style="display:none"><source src="sounds/condiments_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="desserts_page" data-move="desserts.html" class="btn desserts_page page_silent" tabindex="9" onfocus="whisper('desserts_page', 'desserts_w')">Desserts
-    </div>
-        <audio id="desserts_page" controls style="display:none"><source src="sounds/desserts_page.mp3" type="audio/mpeg"></audio>
-        <audio id="desserts_w" controls style="display:none"><source src="sounds/desserts_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="drinks_page" data-move="drinks.html" class="btn drinks_page page_silent" tabindex="10" onfocus="whisper('drinks_page', 'drinks_w')">Drinks
-    </div>
-        <audio id="drinks_page" controls style="display:none"><source src="sounds/drinks_page.mp3" type="audio/mpeg"></audio>
-        <audio id="drinks_w" controls style="display:none"><source src="sounds/drinks_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="cuisine_page" data-move="cuisine.html" class="btn cuisine_page page_silent" tabindex="11" onfocus="whisper('cuisine_page', 'cuisine_w')">Cuisine
-    </div>
-        <audio id="cuisine_page" controls style="display:none"><source src="sounds/cuisine_page.mp3" type="audio/mpeg"></audio>
-        <audio id="cuisine_w" controls style="display:none"><source src="sounds/cuisine_w.mp3" type="audio/mpeg"></audio>
-
-    <div data-sound="home_page" data-move="home.html" class="btn back home_page page_silent" tabindex="0" onfocus="whisper('home_page', 'home_back_w')">
-        <img src="images/up.jpg">
-    </div>
-        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
-        <audio id="home_back_w" controls style="display:none"><source src="sounds/home_back_w.mp3" type="audio/mpeg"></audio>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/main_buttons.js"></script>
+    <script src="js/back_buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/talker.js"></script>
+
 </body>
 
 </html>

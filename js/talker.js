@@ -122,6 +122,7 @@ $('.a').focus();
             focusedItem = null;
         }
 
-    setTimeout( function(){ fired = false; },500);
+    // Debouncing: 1/4 second
+    setTimeout( function(){ fired = false; },250);
     });
 });
