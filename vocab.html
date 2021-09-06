@@ -3,29 +3,92 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--****ENTER PAGE TITLE****-->
     <title>Vocab</title>
     <link rel="stylesheet" href="css/talker.css">
 </head>
 
-<script src = "js/menu.js"></script>
+<script language="JavaScript" type="text/javascript" src = "js/menu.js"></script>
 
 <body>
 
-<script language="JavaScript" type="text/javascript">
-    //****ENTER DISPLAY, SOUND, BTNCLASS, MOVE, UP (GO BACK TO)****
-    display = ["VOCAB", "day", "night", "morning", "afternoon", "aqueduct", "mosaic", "ancient", "old", "new", "meteor shower", "happy birthday", "panda", "telescope", "jam board", "Google slides"]
-    sound = ["vocab_page", "day", "night", "morning", "afternoon", "aqueduct", "mosaic", "ancient", "old", "new", "meteor_shower", "happy_birthday", "panda", "telescope", "jam board", "google_slides"]
-    btnclass = ["a", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-    move = ["",  "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-    up="school"
-</script>
+    <div data-sound="vocab_page" data-move="vocab.html" class="btn a vocab_page page_silent" tabindex="1" onfocus="whisper('vocab_page', 'vocab_page')">VOCAB
+    </div>
+        <audio id="vocab_page" controls style="display:none"><source src="sounds/vocab_page.mp3" type="audio/mpeg"></audio>
 
-    <script src="js/main_buttons.js"></script>
-    <script src="js/back_buttons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div data-sound="day" class="btn day" tabindex="2" onfocus="whisper('day', 'day_w')">day</div>
+        <audio id="day" controls style="display:none"><source src="sounds/day.mp3" type="audio/mpeg"></audio>
+        <audio id="day_w" controls style="display:none"><source src="sounds/day_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="night" class="btn night" tabindex="3" onfocus="whisper('night', 'night_w')">night</div>
+        <audio id="night" controls style="display:none"><source src="sounds/night.mp3" type="audio/mpeg"></audio>
+        <audio id="night_w" controls style="display:none"><source src="sounds/night_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="morning" class="btn morning" tabindex="4" onfocus="whisper('morning', 'morning_w')">morning</div>
+        <audio id="morning" controls style="display:none"><source src="sounds/morning.mp3" type="audio/mpeg"></audio>
+        <audio id="morning_w" controls style="display:none"><source src="sounds/morning_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="afternoon" class="btn afternoon" tabindex="5" onfocus="whisper('afternoon', 'afternoon_w')">afternoon</div>
+        <audio id="afternoon" controls style="display:none"><source src="sounds/afternoon.mp3" type="audio/mpeg"></audio>
+        <audio id="afternoon_w" controls style="display:none"><source src="sounds/afternoon_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="aqueduct" class="btn aqueduct" tabindex="6" onfocus="whisper('aqueduct', 'aqueduct_w')">aqueduct</div>
+        <audio id="aqueduct" controls style="display:none"><source src="sounds/aqueduct.mp3" type="audio/mpeg"></audio>
+        <audio id="aqueduct_w" controls style="display:none"><source src="sounds/aqueduct_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="mosaic" class="btn mosaic" tabindex="7" onfocus="whisper('mosaic', 'mosaic_w')">mosaic</div>
+        <audio id="mosaic" controls style="display:none"><source src="sounds/mosaic.mp3" type="audio/mpeg"></audio>
+        <audio id="mosaic_w" controls style="display:none"><source src="sounds/mosaic_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="ancient" class="btn ancient" tabindex="8" onfocus="whisper('ancient', 'ancient_w')">ancient</div>
+        <audio id="ancient" controls style="display:none"><source src="sounds/ancient.mp3" type="audio/mpeg"></audio>
+        <audio id="ancient_w" controls style="display:none"><source src="sounds/ancient_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="old" class="btn old" tabindex="9" onfocus="whisper('old', 'old_w')">old</div>
+        <audio id="old" controls style="display:none"><source src="sounds/old.mp3" type="audio/mpeg"></audio>
+        <audio id="old_w" controls style="display:none"><source src="sounds/old_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="new" class="btn new" tabindex="10" onfocus="whisper('new', 'new_w')">new</div>
+        <audio id="new" controls style="display:none"><source src="sounds/new.mp3" type="audio/mpeg"></audio>
+        <audio id="new_w" controls style="display:none"><source src="sounds/new_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="meteor_shower" class="btn meteor_shower" tabindex="11" onfocus="whisper('meteor_shower', 'meteor_shower_w')">meteor shower</div>
+        <audio id="meteor_shower" controls style="display:none"><source src="sounds/meteor_shower.mp3" type="audio/mpeg"></audio>
+        <audio id="meteor_shower_w" controls style="display:none"><source src="sounds/meteor_shower_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="happy_birthday" class="btn happy_birthday" tabindex="12" onfocus="whisper('happy_birthday', 'happy_birthday_w')">happy birthday</div>
+        <audio id="happy_birthday" controls style="display:none"><source src="sounds/happy_birthday.mp3" type="audio/mpeg"></audio>
+        <audio id="happy_birthday_w" controls style="display:none"><source src="sounds/happy_birthday_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="panda" class="btn panda" tabindex="13" onfocus="whisper('panda', 'panda_w')">panda</div>
+        <audio id="panda" controls style="display:none"><source src="sounds/panda.mp3" type="audio/mpeg"></audio>
+        <audio id="panda_w" controls style="display:none"><source src="sounds/panda_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="telescope" class="btn telescope" tabindex="14" onfocus="whisper('telescope', 'telescope_w')">telescope</div>
+        <audio id="telescope" controls style="display:none"><source src="sounds/telescope.mp3" type="audio/mpeg"></audio>
+        <audio id="telescope_w" controls style="display:none"><source src="sounds/telescope_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="jam_board" class="btn jam_board" tabindex="15" onfocus="whisper('jam_board', 'jam_board_w')">jam board</div>
+        <audio id="jam_board" controls style="display:none"><source src="sounds/jam_board.mp3" type="audio/mpeg"></audio>
+        <audio id="jam_board_w" controls style="display:none"><source src="sounds/jam_board_w.mp3" type="audio/mpeg"></audio>
+    
+    <div data-sound="google_slides" class="btn google_slides" tabindex="16" onfocus="whisper('google_slides', 'google_slides_w')">Google slides</div>
+        <audio id="google_slides" controls style="display:none"><source src="sounds/google_slides.mp3" type="audio/mpeg"></audio>
+        <audio id="google_slides_w" controls style="display:none"><source src="sounds/google_slides_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="home_page" data-move="home.html" class="btn home_page page_silent" tabindex="17" onfocus="whisper('home_page', 'home_w')">
+        <img src="images/home.jpg">
+    </div>
+        <audio id="home_page" controls style="display:none"><source src="sounds/home_page.mp3" type="audio/mpeg"></audio>
+        <audio id="home_w" controls style="display:none"><source src="sounds/home_w.mp3" type="audio/mpeg"></audio>
+
+    <div data-sound="school_page" data-move="school.html" class="btn back school_page page_silent" tabindex="0" onfocus="whisper('school_page', 'school_back_w')">
+        <img src="images/up.jpg">
+    </div>
+        <audio id="school_page" controls style="display:none"><source src="sounds/school_page.mp3" type="audio/mpeg"></audio>
+        <audio id="school_back_w" controls style="display:none"><source src="sounds/school_back_w.mp3" type="audio/mpeg"></audio>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="js/talker.js"></script>
-
 </body>
 
 </html>
