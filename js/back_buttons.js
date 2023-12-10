@@ -9,12 +9,11 @@ if (up !== "home" & up !=="last") {
 }
 
 //BACK TO LAST PAGE BUTTON
-
 if (up == "last") {
-	l7='<input type="button" class="btn back '+up+'_page" value="BACK" onclick="history.back()" onfocus="whisper(\''+up+'_page\', \''+up+'_back_w\')" tabindex="0"/> <audio id="'+up+'_w" controls style="display:none"><source src="sounds/'+up+'_w.mp3" type="audio/mpeg"></audio>'
+	l7='<input type="button" class="btn back '+up+'_page" value="BACK" onclick="history.back()" onfocus="whisper(\''+up+'_page\', \''+up+'_back_w\')" tabindex="'+up_index+'"/> <audio id="'+up+'_w" controls style="display:none"><source src="sounds/'+up+'_w.mp3" type="audio/mpeg"></audio>'
 	l8='<audio id="'+up+'_page" controls style="display:none"><source src="sounds/'+up+'_page.mp3" type="audio/mpeg"></audio><audio id="'+up+'_back_w" controls style="display:none"><source src="sounds/'+up+'_back_w.mp3" type="audio/mpeg"></audio>';
 } else {
-	l7='<div data-sound="'+up+'_page" data-move="'+up+'.html" class="btn back '+up+'_page page_silent" tabindex="0" onfocus="whisper(\''+up+'_page\', \''+up+'_back_w\')"><img src="images/up.jpg"></div>';
+	l7='<div data-sound="'+up+'_page" data-move="'+up+'.html" class="btn back '+up+'_page page_silent" tabindex='+up_index+'" onfocus="whisper(\''+up+'_page\', \''+up+'_back_w\')"> <img src="images/up.jpg"></div>';
 	l8='<audio id="'+up+'_page" controls style="display:none"><source src="sounds/'+up+'_page.mp3" type="audio/mpeg"></audio><audio id="'+up+'_back_w" controls style="display:none"><source src="sounds/'+up+'_back_w.mp3" type="audio/mpeg"></audio>';
 }
 document.write(l7)

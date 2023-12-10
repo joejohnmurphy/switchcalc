@@ -1,5 +1,10 @@
 nLen = display.length
-var home_index=nLen+1
+if (up == "home") {
+	var up_index=nLen+1
+} else {
+	var home_index=nLen+1
+	var up_index=nLen+2
+}
 
 for (i = 0; i < nLen; i++) {
     j = i + 1
